@@ -1,0 +1,751 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache
+vAdder
+Z0 !s110 1673176060
+!i10b 1
+!s100 VJ8fao:2LagmbDo^iR?HV2
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+ICJlkz24L1=1=QM4Si1[YX1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/iman/Desktop/tst
+Z4 w1669109268
+Z5 8C:/Users/iman/Desktop/tst/IF.v
+Z6 FC:/Users/iman/Desktop/tst/IF.v
+!i122 67
+L0 27 3
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1673176060.000000
+Z9 !s107 C:/Users/iman/Desktop/tst/IF.v|
+Z10 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/iman/Desktop/tst/IF.v|
+!i113 1
+Z11 o-work work
+Z12 tCvgOpt 0
+n@adder
+vAdder_32_EXE
+Z13 !s110 1673176059
+!i10b 1
+!s100 aF`H<^9BJT81IAE>o0N?V0
+R1
+I<AJo2OC=_L>gNBD7k]BPI2
+R2
+R3
+Z14 w1669116396
+Z15 8C:/Users/iman/Desktop/tst/EXE.v
+Z16 FC:/Users/iman/Desktop/tst/EXE.v
+!i122 62
+L0 111 3
+R7
+r1
+!s85 0
+31
+Z17 !s108 1673176059.000000
+Z18 !s107 C:/Users/iman/Desktop/tst/EXE.v|
+Z19 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/iman/Desktop/tst/EXE.v|
+!i113 1
+R11
+R12
+n@adder_32_@e@x@e
+vALU
+R13
+!i10b 1
+!s100 ]RE;IF<0ZPkhn<0cV>5B`1
+R1
+IJHT2@m<G?>W7LA=]LbdLW3
+R2
+R3
+R14
+R15
+R16
+!i122 62
+L0 68 27
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!i113 1
+R11
+R12
+n@a@l@u
+vARM
+!s110 1673176058
+!i10b 1
+!s100 ;8ZD0SVjOAb;2nI3J1fVW0
+R1
+IEgamTlC]^TK9iWjc9T=AF0
+R2
+R3
+w1673175970
+8C:\Users\iman\Desktop\tst\ARM.v
+FC:\Users\iman\Desktop\tst\ARM.v
+!i122 60
+L0 1 348
+R7
+r1
+!s85 0
+31
+!s108 1673176058.000000
+!s107 C:\Users\iman\Desktop\tst\ARM.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:\Users\iman\Desktop\tst\ARM.v|
+!i113 1
+R11
+R12
+n@a@r@m
+vcache_controller
+R13
+!i10b 1
+!s100 mE3Z_NAk:nl]V4GXP^cHZ3
+R1
+ILKFi7@?8WB90BeA?eOUc`2
+R2
+R3
+w1673020190
+8C:/Users/iman/Desktop/tst/cache_controller.v
+FC:/Users/iman/Desktop/tst/cache_controller.v
+!i122 61
+L0 15 146
+R7
+r1
+!s85 0
+31
+R17
+!s107 C:/Users/iman/Desktop/tst/cache_controller.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/iman/Desktop/tst/cache_controller.v|
+!i113 1
+R11
+R12
+vCondition_Check
+R0
+!i10b 1
+!s100 BGZM614H`C7<]?n5__n6O1
+R1
+IAm3NVOF`BRKd[KRcnUCJz2
+R2
+R3
+Z20 w1669119234
+Z21 8C:/Users/iman/Desktop/tst/ID.v
+Z22 FC:/Users/iman/Desktop/tst/ID.v
+!i122 65
+L0 228 26
+R7
+r1
+!s85 0
+31
+R17
+Z23 !s107 C:/Users/iman/Desktop/tst/ID.v|
+Z24 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/iman/Desktop/tst/ID.v|
+!i113 1
+R11
+R12
+n@condition_@check
+vEXE
+R13
+!i10b 1
+!s100 g2Z80dGO_Q<bSB`Ol=OlB2
+R1
+IX4e>d0U4hNXH1i;YP<>ZZ1
+R2
+R3
+R14
+R15
+R16
+!i122 62
+L0 1 60
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!i113 1
+R11
+R12
+n@e@x@e
+vEXE_MEM
+R13
+!i10b 1
+!s100 >D``iELPYheIB<c0zTQ@E2
+R1
+IPi3Z_ZRW238BJhm6dDCIh2
+R2
+R3
+w1672662284
+8C:/Users/iman/Desktop/tst/EXE_MEM.v
+FC:/Users/iman/Desktop/tst/EXE_MEM.v
+!i122 63
+L0 1 45
+R7
+r1
+!s85 0
+31
+R17
+!s107 C:/Users/iman/Desktop/tst/EXE_MEM.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/iman/Desktop/tst/EXE_MEM.v|
+!i113 1
+R11
+R12
+n@e@x@e_@m@e@m
+vhazard_Detection_Unit
+R13
+!i10b 1
+!s100 b>2]SV]SD<C[[>mhSn?lP0
+R1
+IGMI@V:3>RFLSAM1TaImWa2
+R2
+R3
+w1669028922
+8C:/Users/iman/Desktop/tst/hazard_Detection_Unit.v
+FC:/Users/iman/Desktop/tst/hazard_Detection_Unit.v
+!i122 64
+L0 1 31
+R7
+r1
+!s85 0
+31
+R17
+!s107 C:/Users/iman/Desktop/tst/hazard_Detection_Unit.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/iman/Desktop/tst/hazard_Detection_Unit.v|
+!i113 1
+R11
+R12
+nhazard_@detection_@unit
+vID
+R13
+!i10b 1
+!s100 Cl82[`Cb?e;VJV=Ecz9h43
+R1
+I4X>@hM99Abfh4`JCW^DZc0
+R2
+R3
+R20
+R21
+R22
+!i122 65
+L0 1 133
+R7
+r1
+!s85 0
+31
+R17
+R23
+R24
+!i113 1
+R11
+R12
+n@i@d
+vID_controlUnit
+R13
+!i10b 1
+!s100 ^BO2mo?dJAO91C82KeBjf0
+R1
+I;ZPJYOTDiQMm4JaN7fghE2
+R2
+R3
+R20
+R21
+R22
+!i122 65
+L0 173 49
+R7
+r1
+!s85 0
+31
+R17
+R23
+R24
+!i113 1
+R11
+R12
+n@i@d_control@unit
+vID_EXE
+R0
+!i10b 1
+!s100 ;I9_VB5C`ZGa6G727[2QW3
+R1
+IzbQd@c4lOoGXLnikgc=[U3
+R2
+R3
+w1672662182
+8C:/Users/iman/Desktop/tst/ID_EXE.v
+FC:/Users/iman/Desktop/tst/ID_EXE.v
+!i122 66
+L0 1 84
+R7
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/iman/Desktop/tst/ID_EXE.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/iman/Desktop/tst/ID_EXE.v|
+!i113 1
+R11
+R12
+n@i@d_@e@x@e
+vIF
+R0
+!i10b 1
+!s100 7NXL3KZAjb^D>=L0eVKkZ1
+R1
+I[eHmLhS]ePZ>EEGKJI8Fd1
+R2
+R3
+R4
+R5
+R6
+!i122 67
+L0 1 21
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+n@i@f
+vIF_ID
+R0
+!i10b 1
+!s100 zR5dTnmOlT]mX<82Pg3Wz1
+R1
+I@b]^U8Zn=f0SVJ:aHhGz50
+R2
+R3
+w1670015378
+8C:/Users/iman/Desktop/tst/IF_ID.v
+FC:/Users/iman/Desktop/tst/IF_ID.v
+!i122 68
+L0 1 25
+R7
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/iman/Desktop/tst/IF_ID.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/iman/Desktop/tst/IF_ID.v|
+!i113 1
+R11
+R12
+n@i@f_@i@d
+vIF_MUX
+R0
+!i10b 1
+!s100 DEMgWOS;VX<LazG90>jk43
+R1
+Ijf3EhY9;5MP[6:oQT`7?11
+R2
+R3
+R4
+R5
+R6
+!i122 67
+L0 91 10
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+n@i@f_@m@u@x
+vinst_mem
+R0
+!i10b 1
+!s100 _Amnl4dLo[Bl]b0`CM8223
+R1
+Ia3kdF;VfmC[L>@B^^S;>T1
+R2
+R3
+R4
+R5
+R6
+!i122 67
+L0 34 53
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+vMEM
+R0
+!i10b 1
+!s100 ZI46hcE6TRQ<m?A1E[?2Z2
+R1
+I14H7B[6P7WEmFKC?>=4`N2
+R2
+R3
+w1673015516
+8C:\Users\iman\Desktop\tst\MEM.v
+FC:\Users\iman\Desktop\tst\MEM.v
+!i122 69
+L0 1 69
+R7
+r1
+!s85 0
+31
+R8
+!s107 C:\Users\iman\Desktop\tst\MEM.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:\Users\iman\Desktop\tst\MEM.v|
+!i113 1
+R11
+R12
+n@m@e@m
+vMEM_WB
+R0
+!i10b 1
+!s100 KNj169@Xh[`@F;CbU]hKg1
+R1
+I<AKEaJgSKc@EcQQI6AXAW2
+R2
+R3
+w1673175330
+8C:/Users/iman/Desktop/tst/MEM_WB.v
+FC:/Users/iman/Desktop/tst/MEM_WB.v
+!i122 70
+L0 1 41
+R7
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/iman/Desktop/tst/MEM_WB.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/iman/Desktop/tst/MEM_WB.v|
+!i113 1
+R11
+R12
+n@m@e@m_@w@b
+vMux2_4_bit
+R0
+!i10b 1
+!s100 YK=hNBT4AXYh]`1:l]Hlb1
+R1
+IAaR9LVelI<_2T>LZiJcIJ1
+R2
+R3
+R20
+R21
+R22
+!i122 65
+L0 268 3
+R7
+r1
+!s85 0
+31
+R17
+R23
+R24
+!i113 1
+R11
+R12
+n@mux2_4_bit
+vMux2_9_bit
+R0
+!i10b 1
+!s100 2odU=<^083Sz<GDMF[5EA3
+R1
+IaUoWK5z`I0io];8DDmY2<2
+R2
+R3
+R20
+R21
+R22
+!i122 65
+L0 272 3
+R7
+r1
+!s85 0
+31
+R17
+R23
+R24
+!i113 1
+R11
+R12
+n@mux2_9_bit
+vNot_1_bit
+R0
+!i10b 1
+!s100 efeT?oj6DkV?`:[;QBI=R2
+R1
+IYGma@VeNjJ3TY5`>?B^fT2
+R2
+R3
+R20
+R21
+R22
+!i122 65
+L0 260 3
+R7
+r1
+!s85 0
+31
+R17
+R23
+R24
+!i113 1
+R11
+R12
+n@not_1_bit
+vOr_1_bit
+R0
+!i10b 1
+!s100 WjiA`fC:LEk129D0CE:9M0
+R1
+IJmIdW<HIoN]_2D6ZUhNl92
+R2
+R3
+R20
+R21
+R22
+!i122 65
+L0 264 3
+R7
+r1
+!s85 0
+31
+R17
+R23
+R24
+!i113 1
+R11
+R12
+n@or_1_bit
+vOr_1_bit_EXE
+R13
+!i10b 1
+!s100 <_S]@ci^G0][GadlIlZz^2
+R1
+IobUn;P?3F:5EGZ<G9gmAH3
+R2
+R3
+R14
+R15
+R16
+!i122 62
+L0 118 3
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!i113 1
+R11
+R12
+n@or_1_bit_@e@x@e
+vPC_reg
+R0
+!i10b 1
+!s100 PI7V]lX=lbHGHia@9A]mR0
+R1
+ILnn^E[hAJeIeSE9OE:oN@0
+R2
+R3
+R4
+R5
+R6
+!i122 67
+L0 105 22
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+n@p@c_reg
+vreg_file
+R13
+!i10b 1
+!s100 A?XzEPikzoS>GUXW2[XXb2
+R1
+IFQceE^0H]P@UQY:ND33bL1
+R2
+R3
+R20
+R21
+R22
+!i122 65
+L0 139 30
+R7
+r1
+!s85 0
+31
+R17
+R23
+R24
+!i113 1
+R11
+R12
+vSRAM
+R0
+!i10b 1
+!s100 f`37ZRVQ:gUnQ3@<n1R;A1
+R1
+IIIzOgic:hQJ?9U08NU<c43
+R2
+R3
+w1672724958
+8C:/Users/iman/Desktop/tst/SRAM.v
+FC:/Users/iman/Desktop/tst/SRAM.v
+!i122 71
+L0 2 18
+R7
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/iman/Desktop/tst/SRAM.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/iman/Desktop/tst/SRAM.v|
+!i113 1
+R11
+R12
+n@s@r@a@m
+vSram_Controller
+Z25 !s110 1673176061
+!i10b 1
+!s100 Wc3PTDFkjRkBg`dmOc`LF1
+R1
+IiJk>kF=E@aBRBDI35ebP83
+R2
+R3
+w1673021158
+8C:/Users/iman/Desktop/tst/Sram_Controller.v
+FC:/Users/iman/Desktop/tst/Sram_Controller.v
+!i122 72
+L0 1 139
+R7
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/iman/Desktop/tst/Sram_Controller.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/iman/Desktop/tst/Sram_Controller.v|
+!i113 1
+R11
+R12
+n@sram_@controller
+vStatus_Register
+R13
+!i10b 1
+!s100 f=HNN:zYSZf[IQjez6zQh3
+R1
+ImI8YjWGKO=gU>l_]Xh21c3
+R2
+R3
+R14
+R15
+R16
+!i122 62
+L0 99 8
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!i113 1
+R11
+R12
+n@status_@register
+vtb
+R25
+!i10b 1
+!s100 Z9P7jPQZ0nN:d6UR0H^iB2
+R1
+IKR8^B4Xga9dAIP^Q:dc=H2
+R2
+R3
+w1673176053
+8C:\Users\iman\Desktop\tst\tb.v
+FC:\Users\iman\Desktop\tst\tb.v
+!i122 73
+L0 2 17
+R7
+r1
+!s85 0
+31
+Z26 !s108 1673176061.000000
+!s107 C:\Users\iman\Desktop\tst\tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:\Users\iman\Desktop\tst\tb.v|
+!i113 1
+R11
+R12
+vVal_2Generate
+R13
+!i10b 1
+!s100 lkJZO]L5c6FgC7U5<HK=m0
+R1
+ITVA834n:J>KJTH4B<QTe>1
+R2
+R3
+R14
+R15
+R16
+!i122 62
+L0 126 35
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!i113 1
+R11
+R12
+n@val_2@generate
+vWB
+R25
+!i10b 1
+!s100 <mcK2c]BANOk>=`ZRm@:W2
+R1
+Ifnc`5igTA41NlZnnWV7:11
+R2
+R3
+w1668797578
+8C:/Users/iman/Desktop/tst/WB.v
+FC:/Users/iman/Desktop/tst/WB.v
+!i122 74
+L0 1 19
+R7
+r1
+!s85 0
+31
+R26
+!s107 C:/Users/iman/Desktop/tst/WB.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/iman/Desktop/tst/WB.v|
+!i113 1
+R11
+R12
+n@w@b

@@ -1,0 +1,378 @@
+Analysis & Synthesis report for ARM
+Sun Jan 08 14:51:15 2023
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Messages
+  6. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Failed - Sun Jan 08 14:51:15 2023               ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; ARM                                             ;
+; Top-level Entity Name              ; ARM                                             ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; N/A until Partition Merge                       ;
+;     Total combinational functions  ; N/A until Partition Merge                       ;
+;     Dedicated logic registers      ; N/A until Partition Merge                       ;
+; Total registers                    ; N/A until Partition Merge                       ;
+; Total pins                         ; N/A until Partition Merge                       ;
+; Total virtual pins                 ; N/A until Partition Merge                       ;
+; Total memory bits                  ; N/A until Partition Merge                       ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
+; Total PLLs                         ; N/A until Partition Merge                       ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                                      ; ARM                ; ARM                ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sun Jan 08 14:51:13 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ARM -c ARM
+Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (12021): Found 1 design units, including 1 entities, in source file wb.v
+    Info (12023): Found entity 1: WB
+Info (12021): Found 1 design units, including 1 entities, in source file sram_controller.v
+    Info (12023): Found entity 1: Sram_Controller
+Info (12021): Found 1 design units, including 1 entities, in source file sram.v
+    Info (12023): Found entity 1: SRAM
+Info (12021): Found 1 design units, including 1 entities, in source file mem_wb.v
+    Info (12023): Found entity 1: MEM_WB
+Info (12021): Found 1 design units, including 1 entities, in source file mem.v
+    Info (12023): Found entity 1: MEM
+Info (12021): Found 1 design units, including 1 entities, in source file if_id.v
+    Info (12023): Found entity 1: IF_ID
+Info (12021): Found 5 design units, including 5 entities, in source file if.v
+    Info (12023): Found entity 1: IF
+    Info (12023): Found entity 2: Adder
+    Info (12023): Found entity 3: inst_mem
+    Info (12023): Found entity 4: IF_MUX
+    Info (12023): Found entity 5: PC_reg
+Info (12021): Found 1 design units, including 1 entities, in source file id_exe.v
+    Info (12023): Found entity 1: ID_EXE
+Warning (10229): Verilog HDL Expression warning at ID.v(189): truncated literal to match 4 bits
+Info (12021): Found 8 design units, including 8 entities, in source file id.v
+    Info (12023): Found entity 1: ID
+    Info (12023): Found entity 2: reg_file
+    Info (12023): Found entity 3: ID_controlUnit
+    Info (12023): Found entity 4: Condition_Check
+    Info (12023): Found entity 5: Not_1_bit
+    Info (12023): Found entity 6: Or_1_bit
+    Info (12023): Found entity 7: Mux2_4_bit
+    Info (12023): Found entity 8: Mux2_9_bit
+Info (12021): Found 1 design units, including 1 entities, in source file hazard_detection_unit.v
+    Info (12023): Found entity 1: hazard_Detection_Unit
+Info (12021): Found 1 design units, including 1 entities, in source file exe_mem.v
+    Info (12023): Found entity 1: EXE_MEM
+Info (12021): Found 6 design units, including 6 entities, in source file exe.v
+    Info (12023): Found entity 1: EXE
+    Info (12023): Found entity 2: ALU
+    Info (12023): Found entity 3: Status_Register
+    Info (12023): Found entity 4: Adder_32_EXE
+    Info (12023): Found entity 5: Or_1_bit_EXE
+    Info (12023): Found entity 6: Val_2Generate
+Info (12021): Found 1 design units, including 1 entities, in source file cache_controller.v
+    Info (12023): Found entity 1: cache_controller
+Info (12021): Found 1 design units, including 1 entities, in source file arm.v
+    Info (12023): Found entity 1: ARM
+Warning (10236): Verilog HDL Implicit Net warning at ID.v(53): created implicit net for "Rd"
+Warning (10236): Verilog HDL Implicit Net warning at ARM.v(204): created implicit net for "s_exe_in"
+Info (12127): Elaborating entity "ARM" for the top level hierarchy
+Info (12128): Elaborating entity "IF" for hierarchy "IF:if_stage"
+Info (12128): Elaborating entity "Adder" for hierarchy "IF:if_stage|Adder:adder"
+Info (12128): Elaborating entity "inst_mem" for hierarchy "IF:if_stage|inst_mem:mem"
+Info (12128): Elaborating entity "IF_MUX" for hierarchy "IF:if_stage|IF_MUX:mux"
+Info (12128): Elaborating entity "PC_reg" for hierarchy "IF:if_stage|PC_reg:pc_reg"
+Info (12128): Elaborating entity "IF_ID" for hierarchy "IF_ID:if_id"
+Info (12128): Elaborating entity "hazard_Detection_Unit" for hierarchy "hazard_Detection_Unit:HazardDetectionUnit"
+Info (12128): Elaborating entity "ID" for hierarchy "ID:id_stage"
+Warning (10036): Verilog HDL or VHDL warning at ID.v(53): object "Rd" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at ID.v(53): truncated value with size 4 to match size of target (1)
+Info (12128): Elaborating entity "reg_file" for hierarchy "ID:id_stage|reg_file:RF"
+Info (12128): Elaborating entity "ID_controlUnit" for hierarchy "ID:id_stage|ID_controlUnit:ID_CU"
+Warning (10272): Verilog HDL Case Statement warning at ID.v(206): case item expression covers a value already covered by a previous case item
+Info (12128): Elaborating entity "Condition_Check" for hierarchy "ID:id_stage|Condition_Check:cond_check"
+Info (12128): Elaborating entity "Not_1_bit" for hierarchy "ID:id_stage|Not_1_bit:not_1"
+Info (12128): Elaborating entity "Or_1_bit" for hierarchy "ID:id_stage|Or_1_bit:or_1"
+Info (12128): Elaborating entity "Mux2_9_bit" for hierarchy "ID:id_stage|Mux2_9_bit:mux_1"
+Info (12128): Elaborating entity "Mux2_4_bit" for hierarchy "ID:id_stage|Mux2_4_bit:mux_2"
+Info (12128): Elaborating entity "ID_EXE" for hierarchy "ID_EXE:id_exe"
+Info (12128): Elaborating entity "EXE" for hierarchy "EXE:exec_stage"
+Info (12128): Elaborating entity "ALU" for hierarchy "EXE:exec_stage|ALU:alu_exe"
+Info (12128): Elaborating entity "Status_Register" for hierarchy "EXE:exec_stage|Status_Register:status_reg"
+Info (12128): Elaborating entity "Adder_32_EXE" for hierarchy "EXE:exec_stage|Adder_32_EXE:adder_32"
+Info (12128): Elaborating entity "Or_1_bit_EXE" for hierarchy "EXE:exec_stage|Or_1_bit_EXE:or_1"
+Info (12128): Elaborating entity "Val_2Generate" for hierarchy "EXE:exec_stage|Val_2Generate:Val_2Gen"
+Warning (10240): Verilog HDL Always Construct warning at EXE.v(139): inferring latch(es) for variable "tmp", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at EXE.v(139): inferring latch(es) for variable "Val_2", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "Val_2[0]" at EXE.v(157)
+Info (10041): Inferred latch for "Val_2[1]" at EXE.v(157)
+Info (10041): Inferred latch for "Val_2[2]" at EXE.v(157)
+Info (10041): Inferred latch for "Val_2[3]" at EXE.v(157)
+Info (10041): Inferred latch for "Val_2[4]" at EXE.v(157)
+Info (10041): Inferred latch for "Val_2[5]" at EXE.v(157)
+Info (10041): Inferred latch for "Val_2[6]" at EXE.v(157)
+Info (10041): Inferred latch for "Val_2[7]" at EXE.v(157)
+Info (10041): Inferred latch for "Val_2[8]" at EXE.v(157)
+Info (10041): Inferred latch for "Val_2[9]" at EXE.v(157)
+Info (10041): Inferred latch for "Val_2[10]" at EXE.v(157)
+Info (10041): Inferred latch for "Val_2[11]" at EXE.v(157)
+Info (10041): Inferred latch for "Val_2[12]" at EXE.v(157)
+Info (10041): Inferred latch for "Val_2[13]" at EXE.v(157)
+Info (10041): Inferred latch for "Val_2[14]" at EXE.v(157)
+Info (10041): Inferred latch for "Val_2[15]" at EXE.v(157)
+Info (10041): Inferred latch for "Val_2[16]" at EXE.v(157)
+Info (10041): Inferred latch for "Val_2[17]" at EXE.v(157)
+Info (10041): Inferred latch for "Val_2[18]" at EXE.v(157)
+Info (10041): Inferred latch for "Val_2[19]" at EXE.v(157)
+Info (10041): Inferred latch for "Val_2[20]" at EXE.v(157)
+Info (10041): Inferred latch for "Val_2[21]" at EXE.v(157)
+Info (10041): Inferred latch for "Val_2[22]" at EXE.v(157)
+Info (10041): Inferred latch for "Val_2[23]" at EXE.v(157)
+Info (10041): Inferred latch for "Val_2[24]" at EXE.v(157)
+Info (10041): Inferred latch for "Val_2[25]" at EXE.v(157)
+Info (10041): Inferred latch for "Val_2[26]" at EXE.v(157)
+Info (10041): Inferred latch for "Val_2[27]" at EXE.v(157)
+Info (10041): Inferred latch for "Val_2[28]" at EXE.v(157)
+Info (10041): Inferred latch for "Val_2[29]" at EXE.v(157)
+Info (10041): Inferred latch for "Val_2[30]" at EXE.v(157)
+Info (10041): Inferred latch for "Val_2[31]" at EXE.v(157)
+Info (12128): Elaborating entity "EXE_MEM" for hierarchy "EXE_MEM:exe_mem"
+Info (12128): Elaborating entity "MEM" for hierarchy "MEM:mem_stage"
+Info (12128): Elaborating entity "cache_controller" for hierarchy "MEM:mem_stage|cache_controller:CACHE_CONTROLLER"
+Warning (10036): Verilog HDL or VHDL warning at cache_controller.v(22): object "cacheAddress" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at cache_controller.v(26): truncated value with size 32 to match size of target (17)
+Warning (10240): Verilog HDL Always Construct warning at cache_controller.v(93): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "cache[63][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[62][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[61][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[60][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[59][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[58][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[57][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[56][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[55][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[54][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[53][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[52][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[51][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[50][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[49][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[48][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[47][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[46][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[45][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[44][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[43][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[42][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[41][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[40][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[39][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[38][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[37][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[36][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[35][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[34][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[33][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[32][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[31][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[30][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[29][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[28][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[27][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[26][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[25][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[24][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[23][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[22][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[21][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[20][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[19][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[18][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[17][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[16][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[15][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[14][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[13][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[12][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[11][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[10][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[9][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[8][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[7][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[6][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[5][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[4][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[3][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[2][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[1][0]" at cache_controller.v(50)
+Info (10041): Inferred latch for "cache[0][0]" at cache_controller.v(50)
+Error (10028): Can't resolve multiple constant drivers for net "cache[0][0]" at cache_controller.v(107) File: C:/Users/iman/Desktop/DLD2/ARM-WithSRAM-WithCache_FPGA/cache_controller.v Line: 107
+Error (10029): Constant driver at cache_controller.v(50) File: C:/Users/iman/Desktop/DLD2/ARM-WithSRAM-WithCache_FPGA/cache_controller.v Line: 50
+Error (10028): Can't resolve multiple constant drivers for net "cache[1][0]" at cache_controller.v(107) File: C:/Users/iman/Desktop/DLD2/ARM-WithSRAM-WithCache_FPGA/cache_controller.v Line: 107
+Error (10028): Can't resolve multiple constant drivers for net "cache[2][0]" at cache_controller.v(107) File: C:/Users/iman/Desktop/DLD2/ARM-WithSRAM-WithCache_FPGA/cache_controller.v Line: 107
+Error (10028): Can't resolve multiple constant drivers for net "cache[3][0]" at cache_controller.v(107) File: C:/Users/iman/Desktop/DLD2/ARM-WithSRAM-WithCache_FPGA/cache_controller.v Line: 107
+Error (10028): Can't resolve multiple constant drivers for net "cache[4][0]" at cache_controller.v(107) File: C:/Users/iman/Desktop/DLD2/ARM-WithSRAM-WithCache_FPGA/cache_controller.v Line: 107
+Error (10028): Can't resolve multiple constant drivers for net "cache[5][0]" at cache_controller.v(107) File: C:/Users/iman/Desktop/DLD2/ARM-WithSRAM-WithCache_FPGA/cache_controller.v Line: 107
+Error (10028): Can't resolve multiple constant drivers for net "cache[6][0]" at cache_controller.v(107) File: C:/Users/iman/Desktop/DLD2/ARM-WithSRAM-WithCache_FPGA/cache_controller.v Line: 107
+Error (10028): Can't resolve multiple constant drivers for net "cache[7][0]" at cache_controller.v(107) File: C:/Users/iman/Desktop/DLD2/ARM-WithSRAM-WithCache_FPGA/cache_controller.v Line: 107
+Error (10028): Can't resolve multiple constant drivers for net "cache[8][0]" at cache_controller.v(107) File: C:/Users/iman/Desktop/DLD2/ARM-WithSRAM-WithCache_FPGA/cache_controller.v Line: 107
+Error (10028): Can't resolve multiple constant drivers for net "cache[9][0]" at cache_controller.v(107) File: C:/Users/iman/Desktop/DLD2/ARM-WithSRAM-WithCache_FPGA/cache_controller.v Line: 107
+Error (10028): Can't resolve multiple constant drivers for net "cache[10][0]" at cache_controller.v(107) File: C:/Users/iman/Desktop/DLD2/ARM-WithSRAM-WithCache_FPGA/cache_controller.v Line: 107
+Error (10028): Can't resolve multiple constant drivers for net "cache[11][0]" at cache_controller.v(107) File: C:/Users/iman/Desktop/DLD2/ARM-WithSRAM-WithCache_FPGA/cache_controller.v Line: 107
+Error (10028): Can't resolve multiple constant drivers for net "cache[12][0]" at cache_controller.v(107) File: C:/Users/iman/Desktop/DLD2/ARM-WithSRAM-WithCache_FPGA/cache_controller.v Line: 107
+Error (10028): Can't resolve multiple constant drivers for net "cache[13][0]" at cache_controller.v(107) File: C:/Users/iman/Desktop/DLD2/ARM-WithSRAM-WithCache_FPGA/cache_controller.v Line: 107
+Error (10028): Can't resolve multiple constant drivers for net "cache[14][0]" at cache_controller.v(107) File: C:/Users/iman/Desktop/DLD2/ARM-WithSRAM-WithCache_FPGA/cache_controller.v Line: 107
+Error (10028): Can't resolve multiple constant drivers for net "cache[15][0]" at cache_controller.v(107) File: C:/Users/iman/Desktop/DLD2/ARM-WithSRAM-WithCache_FPGA/cache_controller.v Line: 107
+Error (10028): Can't resolve multiple constant drivers for net "cache[16][0]" at cache_controller.v(107) File: C:/Users/iman/Desktop/DLD2/ARM-WithSRAM-WithCache_FPGA/cache_controller.v Line: 107
+Error (10028): Can't resolve multiple constant drivers for net "cache[17][0]" at cache_controller.v(107) File: C:/Users/iman/Desktop/DLD2/ARM-WithSRAM-WithCache_FPGA/cache_controller.v Line: 107
+Error (12152): Can't elaborate user hierarchy "MEM:mem_stage|cache_controller:CACHE_CONTROLLER" File: C:/Users/iman/Desktop/DLD2/ARM-WithSRAM-WithCache_FPGA/MEM.v Line: 53
+Info (144001): Generated suppressed messages file C:/Users/iman/Desktop/DLD2/ARM-WithSRAM-WithCache_FPGA/output_files/ARM.map.smsg
+Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 20 errors, 11 warnings
+    Error: Peak virtual memory: 4681 megabytes
+    Error: Processing ended: Sun Jan 08 14:51:16 2023
+    Error: Elapsed time: 00:00:03
+    Error: Total CPU time (on all processors): 00:00:03
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/iman/Desktop/DLD2/ARM-WithSRAM-WithCache_FPGA/output_files/ARM.map.smsg.
+
+

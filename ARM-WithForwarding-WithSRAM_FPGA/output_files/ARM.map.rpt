@@ -1,0 +1,1582 @@
+Analysis & Synthesis report for ARM
+Sat Feb 04 21:10:06 2023
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |ARM|MEM:mem_stage|Sram_Controller:SRAM_CONTROLLER|ps
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: hazard_Detection_Unit:HazardDetectionUnit
+ 14. Parameter Settings for User Entity Instance: ID:id_stage|ID_controlUnit:ID_CU
+ 15. Parameter Settings for User Entity Instance: MEM:mem_stage|Sram_Controller:SRAM_CONTROLLER
+ 16. Port Connectivity Checks: "WB:wb_stage"
+ 17. Port Connectivity Checks: "MEM:mem_stage|Sram_Controller:SRAM_CONTROLLER"
+ 18. Port Connectivity Checks: "EXE:exec_stage|Adder_32_EXE:adder_32"
+ 19. Port Connectivity Checks: "hazard_Detection_Unit:HazardDetectionUnit"
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
+ 22. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sat Feb 04 21:10:05 2023           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; ARM                                             ;
+; Top-level Entity Name              ; ARM                                             ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 0                                               ;
+;     Total combinational functions  ; 0                                               ;
+;     Dedicated logic registers      ; 0                                               ;
+; Total registers                    ; 0                                               ;
+; Total pins                         ; 2                                               ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                                      ; ARM                ; ARM                ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                      ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                        ; Library ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------+---------+
+; WB.v                             ; yes             ; User Verilog HDL File  ; C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM_FPGA/WB.v                    ;         ;
+; Sram_Controller.v                ; yes             ; User Verilog HDL File  ; C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM_FPGA/Sram_Controller.v       ;         ;
+; SRAM.v                           ; yes             ; User Verilog HDL File  ; C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM_FPGA/SRAM.v                  ;         ;
+; MEM_WB.v                         ; yes             ; User Verilog HDL File  ; C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM_FPGA/MEM_WB.v                ;         ;
+; MEM.v                            ; yes             ; User Verilog HDL File  ; C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM_FPGA/MEM.v                   ;         ;
+; IF_ID.v                          ; yes             ; User Verilog HDL File  ; C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM_FPGA/IF_ID.v                 ;         ;
+; IF.v                             ; yes             ; User Verilog HDL File  ; C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM_FPGA/IF.v                    ;         ;
+; ID_EXE.v                         ; yes             ; User Verilog HDL File  ; C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM_FPGA/ID_EXE.v                ;         ;
+; ID.v                             ; yes             ; User Verilog HDL File  ; C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM_FPGA/ID.v                    ;         ;
+; hazard_Detection_Unit.v          ; yes             ; User Verilog HDL File  ; C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM_FPGA/hazard_Detection_Unit.v ;         ;
+; Forwarding_Unit.v                ; yes             ; User Verilog HDL File  ; C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM_FPGA/Forwarding_Unit.v       ;         ;
+; EXE_MEM.v                        ; yes             ; User Verilog HDL File  ; C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM_FPGA/EXE_MEM.v               ;         ;
+; EXE.v                            ; yes             ; User Verilog HDL File  ; C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM_FPGA/EXE.v                   ;         ;
+; ARM.v                            ; yes             ; User Verilog HDL File  ; C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM_FPGA/ARM.v                   ;         ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+;                                             ;       ;
+; Total combinational functions               ; 0     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 2     ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
++---------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |ARM                       ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 2    ; 0            ; |ARM                ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------+
+; State Machine - |ARM|MEM:mem_stage|Sram_Controller:SRAM_CONTROLLER|ps ;
++--------+--------+--------+--------+--------+--------+-----------------+
+; Name   ; ps.S_5 ; ps.S_4 ; ps.S_3 ; ps.S_2 ; ps.S_1 ; ps.S_0          ;
++--------+--------+--------+--------+--------+--------+-----------------+
+; ps.S_0 ; 0      ; 0      ; 0      ; 0      ; 0      ; 0               ;
+; ps.S_1 ; 0      ; 0      ; 0      ; 0      ; 1      ; 1               ;
+; ps.S_2 ; 0      ; 0      ; 0      ; 1      ; 0      ; 1               ;
+; ps.S_3 ; 0      ; 0      ; 1      ; 0      ; 0      ; 1               ;
+; ps.S_4 ; 0      ; 1      ; 0      ; 0      ; 0      ; 1               ;
+; ps.S_5 ; 1      ; 0      ; 0      ; 0      ; 0      ; 1               ;
++--------+--------+--------+--------+--------+--------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                 ;
++--------------------------------------------------------------+-----------------------------------------------------+
+; Register name                                                ; Reason for Removal                                  ;
++--------------------------------------------------------------+-----------------------------------------------------+
+; ID_EXE:id_exe|Signed_EX_imm24[11]                            ; Merged with ID_EXE:id_exe|Val_2_Generate_in_3[11]   ;
+; ID_EXE:id_exe|Signed_EX_imm24[10]                            ; Merged with ID_EXE:id_exe|Val_2_Generate_in_3[10]   ;
+; ID_EXE:id_exe|Signed_EX_imm24[9]                             ; Merged with ID_EXE:id_exe|Val_2_Generate_in_3[9]    ;
+; ID_EXE:id_exe|Signed_EX_imm24[8]                             ; Merged with ID_EXE:id_exe|Val_2_Generate_in_3[8]    ;
+; ID_EXE:id_exe|Signed_EX_imm24[7]                             ; Merged with ID_EXE:id_exe|Val_2_Generate_in_3[7]    ;
+; ID_EXE:id_exe|Signed_EX_imm24[6]                             ; Merged with ID_EXE:id_exe|Val_2_Generate_in_3[6]    ;
+; ID_EXE:id_exe|Signed_EX_imm24[5]                             ; Merged with ID_EXE:id_exe|Val_2_Generate_in_3[5]    ;
+; ID_EXE:id_exe|Signed_EX_imm24[4]                             ; Merged with ID_EXE:id_exe|Val_2_Generate_in_3[4]    ;
+; ID_EXE:id_exe|Signed_EX_imm24[3]                             ; Merged with ID_EXE:id_exe|Val_2_Generate_in_3[3]    ;
+; ID_EXE:id_exe|Signed_EX_imm24[2]                             ; Merged with ID_EXE:id_exe|Val_2_Generate_in_3[2]    ;
+; ID_EXE:id_exe|Signed_EX_imm24[1]                             ; Merged with ID_EXE:id_exe|Val_2_Generate_in_3[1]    ;
+; ID_EXE:id_exe|Signed_EX_imm24[0]                             ; Merged with ID_EXE:id_exe|Val_2_Generate_in_3[0]    ;
+; ID_EXE:id_exe|src_1_Rn_out[1]                                ; Merged with ID_EXE:id_exe|Signed_EX_imm24[17]       ;
+; ID_EXE:id_exe|src_1_Rn_out[0]                                ; Merged with ID_EXE:id_exe|Signed_EX_imm24[16]       ;
+; ID_EXE:id_exe|Dest_out[3]                                    ; Merged with ID_EXE:id_exe|Signed_EX_imm24[15]       ;
+; ID_EXE:id_exe|Dest_out[2]                                    ; Merged with ID_EXE:id_exe|Signed_EX_imm24[14]       ;
+; ID_EXE:id_exe|Dest_out[1]                                    ; Merged with ID_EXE:id_exe|Signed_EX_imm24[13]       ;
+; ID_EXE:id_exe|Dest_out[0]                                    ; Merged with ID_EXE:id_exe|Signed_EX_imm24[12]       ;
+; ID_EXE:id_exe|PC_out[1]                                      ; Merged with ID_EXE:id_exe|PC_out[0]                 ;
+; ID_EXE:id_exe|src_1_Rn_out[3]                                ; Merged with ID_EXE:id_exe|Signed_EX_imm24[19]       ;
+; ID_EXE:id_exe|src_1_Rn_out[2]                                ; Merged with ID_EXE:id_exe|Signed_EX_imm24[18]       ;
+; IF_ID:if_id|PC_out[1]                                        ; Merged with IF_ID:if_id|PC_out[0]                   ;
+; IF:if_stage|PC_reg:pc_reg|PC_reg_out[1]                      ; Merged with IF:if_stage|PC_reg:pc_reg|PC_reg_out[0] ;
+; IF_ID:if_id|PC_out[0]                                        ; Stuck at GND due to stuck port data_in              ;
+; ID_EXE:id_exe|PC_out[0]                                      ; Stuck at GND due to stuck port data_in              ;
+; IF:if_stage|PC_reg:pc_reg|PC_reg_out[0]                      ; Stuck at GND due to stuck port data_in              ;
+; IF_ID:if_id|instruction[9]                                   ; Merged with IF_ID:if_id|instruction[11]             ;
+; IF_ID:if_id|instruction[5]                                   ; Merged with IF_ID:if_id|instruction[7]              ;
+; ID_EXE:id_exe|Val_2_Generate_in_3[9]                         ; Merged with ID_EXE:id_exe|Val_2_Generate_in_3[11]   ;
+; ID_EXE:id_exe|Val_2_Generate_in_3[5]                         ; Merged with ID_EXE:id_exe|Val_2_Generate_in_3[7]    ;
+; MEM:mem_stage|Sram_Controller:SRAM_CONTROLLER|ps~4           ; Lost fanout                                         ;
+; MEM:mem_stage|Sram_Controller:SRAM_CONTROLLER|ps~5           ; Lost fanout                                         ;
+; MEM:mem_stage|Sram_Controller:SRAM_CONTROLLER|ps~6           ; Lost fanout                                         ;
+; EXE_MEM:exe_mem|MEM_R_EN_out                                 ; Lost fanout                                         ;
+; EXE_MEM:exe_mem|MEM_W_EN_out                                 ; Lost fanout                                         ;
+; ID_EXE:id_exe|MEM_R_EN_out                                   ; Lost fanout                                         ;
+; ID_EXE:id_exe|MEM_W_EN_out                                   ; Lost fanout                                         ;
+; IF_ID:if_id|instruction[20,26,27]                            ; Lost fanout                                         ;
+; ID_EXE:id_exe|Branch_Tacken                                  ; Lost fanout                                         ;
+; IF:if_stage|PC_reg:pc_reg|PC_reg_out[2..7]                   ; Lost fanout                                         ;
+; IF_ID:if_id|instruction[0..3,12..15]                         ; Lost fanout                                         ;
+; ID_EXE:id_exe|Signed_EX_imm24[12..15]                        ; Lost fanout                                         ;
+; IF_ID:if_id|instruction[25]                                  ; Lost fanout                                         ;
+; ID_EXE:id_exe|WB_EN_out                                      ; Lost fanout                                         ;
+; IF_ID:if_id|instruction[16..19,21..24]                       ; Lost fanout                                         ;
+; EXE:exec_stage|Status_Register:status_reg|Status_out[28..31] ; Lost fanout                                         ;
+; IF_ID:if_id|instruction[28..31]                              ; Lost fanout                                         ;
+; IF:if_stage|PC_reg:pc_reg|PC_reg_out[8..31]                  ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_2_Generate_in_3[0]                         ; Lost fanout                                         ;
+; ID_EXE:id_exe|PC_out[2]                                      ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_2_Generate_in_3[1]                         ; Lost fanout                                         ;
+; ID_EXE:id_exe|PC_out[3]                                      ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_2_Generate_in_3[2]                         ; Lost fanout                                         ;
+; ID_EXE:id_exe|PC_out[4]                                      ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_2_Generate_in_3[3]                         ; Lost fanout                                         ;
+; ID_EXE:id_exe|PC_out[5]                                      ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_2_Generate_in_3[4]                         ; Lost fanout                                         ;
+; ID_EXE:id_exe|PC_out[6]                                      ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_2_Generate_in_3[7]                         ; Lost fanout                                         ;
+; ID_EXE:id_exe|PC_out[7]                                      ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_2_Generate_in_3[6]                         ; Lost fanout                                         ;
+; ID_EXE:id_exe|PC_out[8,9]                                    ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_2_Generate_in_3[8]                         ; Lost fanout                                         ;
+; ID_EXE:id_exe|PC_out[10]                                     ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_2_Generate_in_3[11]                        ; Lost fanout                                         ;
+; ID_EXE:id_exe|PC_out[11]                                     ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_2_Generate_in_3[10]                        ; Lost fanout                                         ;
+; ID_EXE:id_exe|PC_out[12..17]                                 ; Lost fanout                                         ;
+; ID_EXE:id_exe|Signed_EX_imm24[16]                            ; Lost fanout                                         ;
+; ID_EXE:id_exe|PC_out[18]                                     ; Lost fanout                                         ;
+; ID_EXE:id_exe|Signed_EX_imm24[17]                            ; Lost fanout                                         ;
+; ID_EXE:id_exe|PC_out[19]                                     ; Lost fanout                                         ;
+; ID_EXE:id_exe|Signed_EX_imm24[18]                            ; Lost fanout                                         ;
+; ID_EXE:id_exe|PC_out[20]                                     ; Lost fanout                                         ;
+; ID_EXE:id_exe|Signed_EX_imm24[19]                            ; Lost fanout                                         ;
+; ID_EXE:id_exe|PC_out[21]                                     ; Lost fanout                                         ;
+; ID_EXE:id_exe|Signed_EX_imm24[20]                            ; Lost fanout                                         ;
+; ID_EXE:id_exe|PC_out[22]                                     ; Lost fanout                                         ;
+; ID_EXE:id_exe|Signed_EX_imm24[21]                            ; Lost fanout                                         ;
+; ID_EXE:id_exe|PC_out[23]                                     ; Lost fanout                                         ;
+; ID_EXE:id_exe|Signed_EX_imm24[22]                            ; Lost fanout                                         ;
+; ID_EXE:id_exe|PC_out[24]                                     ; Lost fanout                                         ;
+; ID_EXE:id_exe|Signed_EX_imm24[23]                            ; Lost fanout                                         ;
+; ID_EXE:id_exe|PC_out[25..31]                                 ; Lost fanout                                         ;
+; EXE_MEM:exe_mem|ALU_Res_out[31]                              ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_1[31]                                      ; Lost fanout                                         ;
+; MEM_WB:mem_wb|ALU_Res_out[31]                                ; Lost fanout                                         ;
+; MEM_WB:mem_wb|DataMemory_out[31]                             ; Lost fanout                                         ;
+; MEM_WB:mem_wb|MEM_R_EN_out                                   ; Lost fanout                                         ;
+; MEM_WB:mem_wb|WB_WB_EN                                       ; Lost fanout                                         ;
+; MEM_WB:mem_wb|WB_Dest[0..3]                                  ; Lost fanout                                         ;
+; EXE_MEM:exe_mem|WB_EN_out                                    ; Lost fanout                                         ;
+; EXE_MEM:exe_mem|Dest_out[0..3]                               ; Lost fanout                                         ;
+; EXE_MEM:exe_mem|ALU_Res_out[30]                              ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_1[30]                                      ; Lost fanout                                         ;
+; MEM_WB:mem_wb|ALU_Res_out[30]                                ; Lost fanout                                         ;
+; MEM_WB:mem_wb|DataMemory_out[30]                             ; Lost fanout                                         ;
+; EXE_MEM:exe_mem|ALU_Res_out[29]                              ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_1[29]                                      ; Lost fanout                                         ;
+; MEM_WB:mem_wb|ALU_Res_out[29]                                ; Lost fanout                                         ;
+; MEM_WB:mem_wb|DataMemory_out[29]                             ; Lost fanout                                         ;
+; EXE_MEM:exe_mem|ALU_Res_out[28]                              ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_1[28]                                      ; Lost fanout                                         ;
+; MEM_WB:mem_wb|ALU_Res_out[28]                                ; Lost fanout                                         ;
+; MEM_WB:mem_wb|DataMemory_out[28]                             ; Lost fanout                                         ;
+; EXE_MEM:exe_mem|ALU_Res_out[27]                              ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_1[27]                                      ; Lost fanout                                         ;
+; MEM_WB:mem_wb|ALU_Res_out[27]                                ; Lost fanout                                         ;
+; MEM_WB:mem_wb|DataMemory_out[27]                             ; Lost fanout                                         ;
+; EXE_MEM:exe_mem|ALU_Res_out[26]                              ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_1[26]                                      ; Lost fanout                                         ;
+; MEM_WB:mem_wb|ALU_Res_out[26]                                ; Lost fanout                                         ;
+; MEM_WB:mem_wb|DataMemory_out[26]                             ; Lost fanout                                         ;
+; EXE_MEM:exe_mem|ALU_Res_out[25]                              ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_1[25]                                      ; Lost fanout                                         ;
+; MEM_WB:mem_wb|ALU_Res_out[25]                                ; Lost fanout                                         ;
+; MEM_WB:mem_wb|DataMemory_out[25]                             ; Lost fanout                                         ;
+; EXE_MEM:exe_mem|ALU_Res_out[24]                              ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_1[24]                                      ; Lost fanout                                         ;
+; MEM_WB:mem_wb|ALU_Res_out[24]                                ; Lost fanout                                         ;
+; MEM_WB:mem_wb|DataMemory_out[24]                             ; Lost fanout                                         ;
+; EXE_MEM:exe_mem|ALU_Res_out[23]                              ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_1[23]                                      ; Lost fanout                                         ;
+; MEM_WB:mem_wb|ALU_Res_out[23]                                ; Lost fanout                                         ;
+; MEM_WB:mem_wb|DataMemory_out[23]                             ; Lost fanout                                         ;
+; EXE_MEM:exe_mem|ALU_Res_out[22]                              ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_1[22]                                      ; Lost fanout                                         ;
+; MEM_WB:mem_wb|ALU_Res_out[22]                                ; Lost fanout                                         ;
+; MEM_WB:mem_wb|DataMemory_out[22]                             ; Lost fanout                                         ;
+; EXE_MEM:exe_mem|ALU_Res_out[21]                              ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_1[21]                                      ; Lost fanout                                         ;
+; MEM_WB:mem_wb|ALU_Res_out[21]                                ; Lost fanout                                         ;
+; MEM_WB:mem_wb|DataMemory_out[21]                             ; Lost fanout                                         ;
+; EXE_MEM:exe_mem|ALU_Res_out[20]                              ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_1[20]                                      ; Lost fanout                                         ;
+; MEM_WB:mem_wb|ALU_Res_out[20]                                ; Lost fanout                                         ;
+; MEM_WB:mem_wb|DataMemory_out[20]                             ; Lost fanout                                         ;
+; EXE_MEM:exe_mem|ALU_Res_out[19]                              ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_1[19]                                      ; Lost fanout                                         ;
+; MEM_WB:mem_wb|ALU_Res_out[19]                                ; Lost fanout                                         ;
+; MEM_WB:mem_wb|DataMemory_out[19]                             ; Lost fanout                                         ;
+; EXE_MEM:exe_mem|ALU_Res_out[18]                              ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_1[18]                                      ; Lost fanout                                         ;
+; MEM_WB:mem_wb|ALU_Res_out[18]                                ; Lost fanout                                         ;
+; MEM_WB:mem_wb|DataMemory_out[18]                             ; Lost fanout                                         ;
+; EXE_MEM:exe_mem|ALU_Res_out[17]                              ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_1[17]                                      ; Lost fanout                                         ;
+; MEM_WB:mem_wb|ALU_Res_out[17]                                ; Lost fanout                                         ;
+; MEM_WB:mem_wb|DataMemory_out[17]                             ; Lost fanout                                         ;
+; EXE_MEM:exe_mem|ALU_Res_out[16]                              ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_1[16]                                      ; Lost fanout                                         ;
+; MEM_WB:mem_wb|ALU_Res_out[16]                                ; Lost fanout                                         ;
+; MEM_WB:mem_wb|DataMemory_out[16]                             ; Lost fanout                                         ;
+; EXE_MEM:exe_mem|ALU_Res_out[15]                              ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_1[15]                                      ; Lost fanout                                         ;
+; MEM_WB:mem_wb|ALU_Res_out[15]                                ; Lost fanout                                         ;
+; MEM_WB:mem_wb|DataMemory_out[15]                             ; Lost fanout                                         ;
+; EXE_MEM:exe_mem|ALU_Res_out[14]                              ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_1[14]                                      ; Lost fanout                                         ;
+; MEM_WB:mem_wb|ALU_Res_out[14]                                ; Lost fanout                                         ;
+; MEM_WB:mem_wb|DataMemory_out[14]                             ; Lost fanout                                         ;
+; EXE_MEM:exe_mem|ALU_Res_out[13]                              ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_1[13]                                      ; Lost fanout                                         ;
+; MEM_WB:mem_wb|ALU_Res_out[13]                                ; Lost fanout                                         ;
+; MEM_WB:mem_wb|DataMemory_out[13]                             ; Lost fanout                                         ;
+; EXE_MEM:exe_mem|ALU_Res_out[12]                              ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_1[12]                                      ; Lost fanout                                         ;
+; MEM_WB:mem_wb|ALU_Res_out[12]                                ; Lost fanout                                         ;
+; MEM_WB:mem_wb|DataMemory_out[12]                             ; Lost fanout                                         ;
+; EXE_MEM:exe_mem|ALU_Res_out[11]                              ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_1[11]                                      ; Lost fanout                                         ;
+; MEM_WB:mem_wb|ALU_Res_out[11]                                ; Lost fanout                                         ;
+; MEM_WB:mem_wb|DataMemory_out[11]                             ; Lost fanout                                         ;
+; EXE_MEM:exe_mem|ALU_Res_out[10]                              ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_1[10]                                      ; Lost fanout                                         ;
+; MEM_WB:mem_wb|ALU_Res_out[10]                                ; Lost fanout                                         ;
+; MEM_WB:mem_wb|DataMemory_out[10]                             ; Lost fanout                                         ;
+; EXE_MEM:exe_mem|ALU_Res_out[9]                               ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_1[9]                                       ; Lost fanout                                         ;
+; MEM_WB:mem_wb|ALU_Res_out[9]                                 ; Lost fanout                                         ;
+; MEM_WB:mem_wb|DataMemory_out[9]                              ; Lost fanout                                         ;
+; EXE_MEM:exe_mem|ALU_Res_out[8]                               ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_1[8]                                       ; Lost fanout                                         ;
+; MEM_WB:mem_wb|ALU_Res_out[8]                                 ; Lost fanout                                         ;
+; MEM_WB:mem_wb|DataMemory_out[8]                              ; Lost fanout                                         ;
+; EXE_MEM:exe_mem|ALU_Res_out[7]                               ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_1[7]                                       ; Lost fanout                                         ;
+; MEM_WB:mem_wb|ALU_Res_out[7]                                 ; Lost fanout                                         ;
+; MEM_WB:mem_wb|DataMemory_out[7]                              ; Lost fanout                                         ;
+; EXE_MEM:exe_mem|ALU_Res_out[6]                               ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_1[6]                                       ; Lost fanout                                         ;
+; MEM_WB:mem_wb|ALU_Res_out[6]                                 ; Lost fanout                                         ;
+; MEM_WB:mem_wb|DataMemory_out[6]                              ; Lost fanout                                         ;
+; EXE_MEM:exe_mem|ALU_Res_out[5]                               ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_1[5]                                       ; Lost fanout                                         ;
+; MEM_WB:mem_wb|ALU_Res_out[5]                                 ; Lost fanout                                         ;
+; MEM_WB:mem_wb|DataMemory_out[5]                              ; Lost fanout                                         ;
+; EXE_MEM:exe_mem|ALU_Res_out[4]                               ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_1[4]                                       ; Lost fanout                                         ;
+; MEM_WB:mem_wb|ALU_Res_out[4]                                 ; Lost fanout                                         ;
+; MEM_WB:mem_wb|DataMemory_out[4]                              ; Lost fanout                                         ;
+; EXE_MEM:exe_mem|ALU_Res_out[3]                               ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_1[3]                                       ; Lost fanout                                         ;
+; MEM_WB:mem_wb|ALU_Res_out[3]                                 ; Lost fanout                                         ;
+; MEM_WB:mem_wb|DataMemory_out[3]                              ; Lost fanout                                         ;
+; EXE_MEM:exe_mem|ALU_Res_out[2]                               ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_1[2]                                       ; Lost fanout                                         ;
+; MEM_WB:mem_wb|ALU_Res_out[2]                                 ; Lost fanout                                         ;
+; MEM_WB:mem_wb|DataMemory_out[2]                              ; Lost fanout                                         ;
+; EXE_MEM:exe_mem|ALU_Res_out[1]                               ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_1[1]                                       ; Lost fanout                                         ;
+; MEM_WB:mem_wb|ALU_Res_out[1]                                 ; Lost fanout                                         ;
+; MEM_WB:mem_wb|DataMemory_out[1]                              ; Lost fanout                                         ;
+; EXE_MEM:exe_mem|ALU_Res_out[0]                               ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_1[0]                                       ; Lost fanout                                         ;
+; MEM_WB:mem_wb|ALU_Res_out[0]                                 ; Lost fanout                                         ;
+; MEM_WB:mem_wb|DataMemory_out[0]                              ; Lost fanout                                         ;
+; ID_EXE:id_exe|C_StatusRegister_ID_EXE_out                    ; Lost fanout                                         ;
+; ID_EXE:id_exe|EXE_CMD_out[0..3]                              ; Lost fanout                                         ;
+; ID_EXE:id_exe|S_out                                          ; Lost fanout                                         ;
+; IF_ID:if_id|PC_out[2..5]                                     ; Lost fanout                                         ;
+; IF_ID:if_id|instruction[4]                                   ; Lost fanout                                         ;
+; IF_ID:if_id|PC_out[6]                                        ; Lost fanout                                         ;
+; IF_ID:if_id|instruction[7]                                   ; Lost fanout                                         ;
+; IF_ID:if_id|PC_out[7]                                        ; Lost fanout                                         ;
+; IF_ID:if_id|instruction[6]                                   ; Lost fanout                                         ;
+; IF_ID:if_id|PC_out[8,9]                                      ; Lost fanout                                         ;
+; IF_ID:if_id|instruction[8]                                   ; Lost fanout                                         ;
+; IF_ID:if_id|PC_out[10]                                       ; Lost fanout                                         ;
+; IF_ID:if_id|instruction[11]                                  ; Lost fanout                                         ;
+; IF_ID:if_id|PC_out[11]                                       ; Lost fanout                                         ;
+; IF_ID:if_id|instruction[10]                                  ; Lost fanout                                         ;
+; IF_ID:if_id|PC_out[12..31]                                   ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[8][31]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[9][31]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[10][31]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[11][31]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[14][31]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[12][31]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[13][31]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[0][31]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[1][31]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[2][31]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[3][31]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[4][31]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[5][31]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[6][31]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[7][31]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[8][30]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[9][30]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[10][30]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[11][30]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[14][30]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[12][30]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[13][30]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[0][30]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[1][30]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[2][30]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[3][30]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[4][30]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[5][30]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[6][30]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[7][30]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[8][29]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[9][29]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[10][29]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[11][29]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[14][29]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[12][29]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[13][29]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[0][29]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[1][29]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[2][29]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[3][29]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[4][29]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[5][29]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[6][29]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[7][29]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[8][28]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[9][28]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[10][28]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[11][28]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[14][28]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[12][28]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[13][28]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[0][28]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[1][28]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[2][28]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[3][28]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[4][28]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[5][28]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[6][28]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[7][28]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[8][27]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[9][27]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[10][27]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[11][27]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[14][27]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[12][27]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[13][27]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[0][27]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[1][27]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[2][27]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[3][27]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[4][27]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[5][27]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[6][27]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[7][27]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[8][26]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[9][26]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[10][26]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[11][26]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[14][26]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[12][26]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[13][26]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[0][26]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[1][26]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[2][26]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[3][26]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[4][26]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[5][26]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[6][26]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[7][26]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[8][25]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[9][25]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[10][25]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[11][25]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[14][25]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[12][25]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[13][25]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[0][25]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[1][25]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[2][25]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[3][25]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[4][25]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[5][25]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[6][25]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[7][25]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[8][24]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[9][24]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[10][24]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[11][24]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[14][24]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[12][24]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[13][24]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[0][24]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[1][24]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[2][24]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[3][24]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[4][24]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[5][24]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[6][24]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[7][24]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[8][23]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[9][23]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[10][23]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[11][23]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[14][23]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[12][23]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[13][23]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[0][23]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[1][23]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[2][23]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[3][23]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[4][23]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[5][23]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[6][23]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[7][23]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[8][22]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[9][22]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[10][22]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[11][22]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[14][22]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[12][22]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[13][22]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[0][22]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[1][22]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[2][22]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[3][22]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[4][22]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[5][22]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[6][22]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[7][22]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[8][21]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[9][21]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[10][21]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[11][21]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[14][21]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[12][21]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[13][21]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[0][21]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[1][21]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[2][21]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[3][21]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[4][21]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[5][21]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[6][21]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[7][21]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[8][20]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[9][20]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[10][20]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[11][20]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[14][20]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[12][20]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[13][20]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[0][20]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[1][20]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[2][20]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[3][20]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[4][20]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[5][20]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[6][20]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[7][20]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[8][19]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[9][19]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[10][19]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[11][19]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[14][19]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[12][19]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[13][19]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[0][19]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[1][19]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[2][19]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[3][19]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[4][19]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[5][19]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[6][19]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[7][19]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[8][18]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[9][18]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[10][18]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[11][18]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[14][18]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[12][18]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[13][18]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[0][18]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[1][18]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[2][18]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[3][18]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[4][18]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[5][18]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[6][18]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[7][18]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[8][17]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[9][17]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[10][17]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[11][17]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[14][17]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[12][17]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[13][17]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[0][17]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[1][17]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[2][17]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[3][17]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[4][17]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[5][17]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[6][17]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[7][17]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[8][16]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[9][16]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[10][16]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[11][16]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[14][16]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[12][16]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[13][16]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[0][16]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[1][16]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[2][16]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[3][16]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[4][16]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[5][16]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[6][16]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[7][16]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[8][15]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[9][15]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[10][15]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[11][15]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[14][15]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[12][15]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[13][15]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[0][15]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[1][15]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[2][15]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[3][15]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[4][15]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[5][15]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[6][15]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[7][15]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[8][14]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[9][14]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[10][14]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[11][14]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[14][14]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[12][14]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[13][14]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[0][14]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[1][14]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[2][14]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[3][14]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[4][14]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[5][14]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[6][14]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[7][14]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[8][13]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[9][13]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[10][13]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[11][13]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[14][13]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[12][13]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[13][13]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[0][13]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[1][13]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[2][13]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[3][13]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[4][13]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[5][13]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[6][13]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[7][13]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[8][12]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[9][12]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[10][12]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[11][12]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[14][12]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[12][12]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[13][12]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[0][12]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[1][12]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[2][12]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[3][12]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[4][12]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[5][12]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[6][12]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[7][12]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[8][11]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[9][11]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[10][11]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[11][11]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[14][11]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[12][11]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[13][11]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[0][11]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[1][11]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[2][11]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[3][11]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[4][11]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[5][11]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[6][11]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[7][11]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[8][10]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[9][10]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[10][10]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[11][10]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[14][10]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[12][10]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[13][10]                          ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[0][10]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[1][10]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[2][10]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[3][10]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[4][10]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[5][10]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[6][10]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[7][10]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[8][9]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[9][9]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[10][9]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[11][9]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[14][9]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[12][9]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[13][9]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[0][9]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[1][9]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[2][9]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[3][9]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[4][9]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[5][9]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[6][9]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[7][9]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[8][8]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[9][8]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[10][8]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[11][8]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[14][8]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[12][8]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[13][8]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[0][8]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[1][8]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[2][8]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[3][8]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[4][8]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[5][8]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[6][8]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[7][8]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[8][7]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[9][7]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[10][7]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[11][7]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[14][7]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[12][7]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[13][7]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[0][7]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[1][7]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[2][7]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[3][7]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[4][7]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[5][7]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[6][7]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[7][7]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[8][6]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[9][6]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[10][6]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[11][6]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[14][6]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[12][6]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[13][6]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[0][6]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[1][6]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[2][6]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[3][6]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[4][6]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[5][6]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[6][6]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[7][6]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[8][5]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[9][5]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[10][5]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[11][5]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[14][5]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[12][5]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[13][5]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[0][5]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[1][5]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[2][5]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[3][5]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[4][5]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[5][5]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[6][5]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[7][5]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[8][4]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[9][4]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[10][4]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[11][4]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[14][4]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[12][4]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[13][4]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[0][4]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[1][4]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[2][4]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[3][4]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[4][4]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[5][4]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[6][4]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[7][4]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[8][3]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[9][3]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[10][3]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[11][3]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[14][3]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[12][3]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[13][3]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[0][3]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[1][3]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[2][3]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[3][3]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[4][3]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[5][3]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[6][3]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[7][3]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[8][2]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[9][2]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[10][2]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[11][2]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[14][2]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[12][2]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[13][2]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[0][2]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[1][2]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[2][2]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[3][2]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[4][2]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[5][2]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[6][2]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[7][2]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[8][1]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[9][1]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[10][1]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[11][1]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[14][1]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[12][1]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[13][1]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[0][1]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[1][1]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[2][1]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[3][1]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[4][1]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[5][1]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[6][1]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[7][1]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[8][0]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[9][0]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[10][0]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[11][0]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[14][0]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[12][0]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[13][0]                           ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[0][0]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[1][0]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[2][0]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[3][0]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[4][0]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[5][0]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[6][0]                            ; Lost fanout                                         ;
+; ID:id_stage|reg_file:RF|Reg[7][0]                            ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_2_Generate_in_1[15]                        ; Lost fanout                                         ;
+; ID_EXE:id_exe|src_2_mux_out[0..3]                            ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_2_Generate_in_1[0..14,16..31]              ; Lost fanout                                         ;
+; ID_EXE:id_exe|Val_2_Generate_in_2                            ; Lost fanout                                         ;
+; EXE_MEM:exe_mem|Val_Rm_out[0..31]                            ; Lost fanout                                         ;
+; MEM:mem_stage|Sram_Controller:SRAM_CONTROLLER|ps.S_0         ; Lost fanout                                         ;
+; MEM:mem_stage|Sram_Controller:SRAM_CONTROLLER|ps.S_1         ; Lost fanout                                         ;
+; MEM:mem_stage|Sram_Controller:SRAM_CONTROLLER|ps.S_2         ; Lost fanout                                         ;
+; MEM:mem_stage|Sram_Controller:SRAM_CONTROLLER|ps.S_3         ; Lost fanout                                         ;
+; MEM:mem_stage|Sram_Controller:SRAM_CONTROLLER|ps.S_4         ; Lost fanout                                         ;
+; MEM:mem_stage|Sram_Controller:SRAM_CONTROLLER|ps.S_5         ; Lost fanout                                         ;
+; Total Number of Removed Registers = 885                      ;                                                     ;
++--------------------------------------------------------------+-----------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                                  ;
++----------------------------------------------------------+---------------------------+---------------------------------------------------------------------------------------+
+; Register name                                            ; Reason for Removal        ; Registers Removed due to This Register                                                ;
++----------------------------------------------------------+---------------------------+---------------------------------------------------------------------------------------+
+; EXE:exec_stage|Status_Register:status_reg|Status_out[31] ; Lost Fanouts              ; ID_EXE:id_exe|Val_2_Generate_in_3[11], EXE_MEM:exe_mem|ALU_Res_out[31],               ;
+;                                                          ;                           ; ID_EXE:id_exe|Val_1[31], MEM_WB:mem_wb|ALU_Res_out[31], EXE_MEM:exe_mem|WB_EN_out,    ;
+;                                                          ;                           ; EXE_MEM:exe_mem|ALU_Res_out[30], ID_EXE:id_exe|Val_1[30],                             ;
+;                                                          ;                           ; EXE_MEM:exe_mem|ALU_Res_out[29], ID_EXE:id_exe|Val_1[29],                             ;
+;                                                          ;                           ; EXE_MEM:exe_mem|ALU_Res_out[28], EXE_MEM:exe_mem|ALU_Res_out[27],                     ;
+;                                                          ;                           ; ID_EXE:id_exe|EXE_CMD_out[1], ID_EXE:id_exe|EXE_CMD_out[2],                           ;
+;                                                          ;                           ; ID_EXE:id_exe|EXE_CMD_out[0], ID_EXE:id_exe|EXE_CMD_out[3], ID_EXE:id_exe|S_out,      ;
+;                                                          ;                           ; IF_ID:if_id|instruction[11], ID:id_stage|reg_file:RF|Reg[8][31],                      ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[9][31], ID:id_stage|reg_file:RF|Reg[10][31],              ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[14][31], ID:id_stage|reg_file:RF|Reg[12][31],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[13][31], ID:id_stage|reg_file:RF|Reg[0][31],              ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[1][31], ID:id_stage|reg_file:RF|Reg[2][31],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[3][31], ID:id_stage|reg_file:RF|Reg[8][30],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[9][30], ID:id_stage|reg_file:RF|Reg[10][30],              ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[14][30], ID:id_stage|reg_file:RF|Reg[12][30],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[13][30], ID:id_stage|reg_file:RF|Reg[0][30],              ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[1][30], ID:id_stage|reg_file:RF|Reg[2][30],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[3][30], ID:id_stage|reg_file:RF|Reg[8][29],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[9][29], ID:id_stage|reg_file:RF|Reg[10][29],              ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[14][29], ID:id_stage|reg_file:RF|Reg[12][29],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[13][29], ID:id_stage|reg_file:RF|Reg[0][29],              ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[1][29], ID:id_stage|reg_file:RF|Reg[2][29],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[3][29]                                                    ;
+; IF_ID:if_id|PC_out[0]                                    ; Stuck at GND              ; ID_EXE:id_exe|PC_out[0], IF:if_stage|PC_reg:pc_reg|PC_reg_out[0],                     ;
+;                                                          ; due to stuck port data_in ; EXE_MEM:exe_mem|MEM_R_EN_out, EXE_MEM:exe_mem|MEM_W_EN_out,                           ;
+;                                                          ;                           ; ID_EXE:id_exe|MEM_R_EN_out, ID_EXE:id_exe|MEM_W_EN_out, IF_ID:if_id|instruction[20],  ;
+;                                                          ;                           ; IF_ID:if_id|instruction[27], IF_ID:if_id|instruction[26],                             ;
+;                                                          ;                           ; ID_EXE:id_exe|Branch_Tacken, IF:if_stage|PC_reg:pc_reg|PC_reg_out[3],                 ;
+;                                                          ;                           ; IF:if_stage|PC_reg:pc_reg|PC_reg_out[6], IF:if_stage|PC_reg:pc_reg|PC_reg_out[5],     ;
+;                                                          ;                           ; IF:if_stage|PC_reg:pc_reg|PC_reg_out[4], IF:if_stage|PC_reg:pc_reg|PC_reg_out[2],     ;
+;                                                          ;                           ; IF:if_stage|PC_reg:pc_reg|PC_reg_out[7], IF_ID:if_id|instruction[3],                  ;
+;                                                          ;                           ; IF_ID:if_id|instruction[15], IF_ID:if_id|instruction[2], IF_ID:if_id|instruction[14], ;
+;                                                          ;                           ; IF_ID:if_id|instruction[1], IF_ID:if_id|instruction[25], ID_EXE:id_exe|WB_EN_out,     ;
+;                                                          ;                           ; IF_ID:if_id|instruction[19], IF_ID:if_id|instruction[18],                             ;
+;                                                          ;                           ; IF_ID:if_id|instruction[21], IF_ID:if_id|instruction[22],                             ;
+;                                                          ;                           ; ID_EXE:id_exe|Val_2_Generate_in_3[0], ID_EXE:id_exe|PC_out[2],                        ;
+;                                                          ;                           ; ID_EXE:id_exe|Val_2_Generate_in_3[1], ID_EXE:id_exe|PC_out[3],                        ;
+;                                                          ;                           ; ID_EXE:id_exe|Val_2_Generate_in_3[2], ID_EXE:id_exe|PC_out[4],                        ;
+;                                                          ;                           ; ID_EXE:id_exe|Val_2_Generate_in_3[3], ID_EXE:id_exe|Signed_EX_imm24[22],              ;
+;                                                          ;                           ; ID_EXE:id_exe|Signed_EX_imm24[23], IF_ID:if_id|PC_out[2], IF_ID:if_id|PC_out[3],      ;
+;                                                          ;                           ; IF_ID:if_id|PC_out[4], MEM:mem_stage|Sram_Controller:SRAM_CONTROLLER|ps.S_5           ;
+; ID_EXE:id_exe|Val_1[21]                                  ; Lost Fanouts              ; ID:id_stage|reg_file:RF|Reg[8][21], ID:id_stage|reg_file:RF|Reg[9][21],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[10][21], ID:id_stage|reg_file:RF|Reg[14][21],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[12][21], ID:id_stage|reg_file:RF|Reg[13][21],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[0][21], ID:id_stage|reg_file:RF|Reg[1][21],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[2][21], ID:id_stage|reg_file:RF|Reg[3][21]                ;
+; ID_EXE:id_exe|Val_1[27]                                  ; Lost Fanouts              ; ID:id_stage|reg_file:RF|Reg[8][27], ID:id_stage|reg_file:RF|Reg[9][27],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[10][27], ID:id_stage|reg_file:RF|Reg[14][27],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[12][27], ID:id_stage|reg_file:RF|Reg[13][27],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[0][27], ID:id_stage|reg_file:RF|Reg[1][27],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[2][27], ID:id_stage|reg_file:RF|Reg[3][27]                ;
+; ID_EXE:id_exe|Val_1[22]                                  ; Lost Fanouts              ; ID:id_stage|reg_file:RF|Reg[8][22], ID:id_stage|reg_file:RF|Reg[9][22],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[10][22], ID:id_stage|reg_file:RF|Reg[14][22],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[12][22], ID:id_stage|reg_file:RF|Reg[13][22],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[0][22], ID:id_stage|reg_file:RF|Reg[1][22],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[2][22], ID:id_stage|reg_file:RF|Reg[3][22]                ;
+; ID_EXE:id_exe|Val_1[23]                                  ; Lost Fanouts              ; ID:id_stage|reg_file:RF|Reg[8][23], ID:id_stage|reg_file:RF|Reg[9][23],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[10][23], ID:id_stage|reg_file:RF|Reg[14][23],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[12][23], ID:id_stage|reg_file:RF|Reg[13][23],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[0][23], ID:id_stage|reg_file:RF|Reg[1][23],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[2][23], ID:id_stage|reg_file:RF|Reg[3][23]                ;
+; ID_EXE:id_exe|Val_1[24]                                  ; Lost Fanouts              ; ID:id_stage|reg_file:RF|Reg[8][24], ID:id_stage|reg_file:RF|Reg[9][24],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[10][24], ID:id_stage|reg_file:RF|Reg[14][24],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[12][24], ID:id_stage|reg_file:RF|Reg[13][24],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[0][24], ID:id_stage|reg_file:RF|Reg[1][24],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[2][24], ID:id_stage|reg_file:RF|Reg[3][24]                ;
+; ID_EXE:id_exe|Val_1[28]                                  ; Lost Fanouts              ; ID:id_stage|reg_file:RF|Reg[8][28], ID:id_stage|reg_file:RF|Reg[9][28],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[10][28], ID:id_stage|reg_file:RF|Reg[14][28],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[12][28], ID:id_stage|reg_file:RF|Reg[13][28],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[0][28], ID:id_stage|reg_file:RF|Reg[1][28],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[2][28], ID:id_stage|reg_file:RF|Reg[3][28]                ;
+; ID_EXE:id_exe|Val_1[25]                                  ; Lost Fanouts              ; ID:id_stage|reg_file:RF|Reg[8][25], ID:id_stage|reg_file:RF|Reg[9][25],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[10][25], ID:id_stage|reg_file:RF|Reg[14][25],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[12][25], ID:id_stage|reg_file:RF|Reg[13][25],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[0][25], ID:id_stage|reg_file:RF|Reg[1][25],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[2][25], ID:id_stage|reg_file:RF|Reg[3][25]                ;
+; ID_EXE:id_exe|Val_1[0]                                   ; Lost Fanouts              ; ID:id_stage|reg_file:RF|Reg[8][0], ID:id_stage|reg_file:RF|Reg[9][0],                 ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[10][0], ID:id_stage|reg_file:RF|Reg[14][0],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[12][0], ID:id_stage|reg_file:RF|Reg[13][0],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[0][0], ID:id_stage|reg_file:RF|Reg[1][0],                 ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[2][0], ID:id_stage|reg_file:RF|Reg[3][0]                  ;
+; ID_EXE:id_exe|Val_1[26]                                  ; Lost Fanouts              ; ID:id_stage|reg_file:RF|Reg[8][26], ID:id_stage|reg_file:RF|Reg[9][26],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[10][26], ID:id_stage|reg_file:RF|Reg[14][26],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[12][26], ID:id_stage|reg_file:RF|Reg[13][26],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[0][26], ID:id_stage|reg_file:RF|Reg[1][26],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[2][26], ID:id_stage|reg_file:RF|Reg[3][26]                ;
+; ID_EXE:id_exe|Val_1[1]                                   ; Lost Fanouts              ; ID:id_stage|reg_file:RF|Reg[8][1], ID:id_stage|reg_file:RF|Reg[9][1],                 ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[10][1], ID:id_stage|reg_file:RF|Reg[14][1],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[12][1], ID:id_stage|reg_file:RF|Reg[13][1],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[0][1], ID:id_stage|reg_file:RF|Reg[1][1],                 ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[2][1], ID:id_stage|reg_file:RF|Reg[3][1]                  ;
+; ID_EXE:id_exe|Val_1[2]                                   ; Lost Fanouts              ; ID:id_stage|reg_file:RF|Reg[8][2], ID:id_stage|reg_file:RF|Reg[9][2],                 ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[10][2], ID:id_stage|reg_file:RF|Reg[14][2],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[12][2], ID:id_stage|reg_file:RF|Reg[13][2],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[0][2], ID:id_stage|reg_file:RF|Reg[1][2],                 ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[2][2], ID:id_stage|reg_file:RF|Reg[3][2]                  ;
+; ID_EXE:id_exe|Val_1[3]                                   ; Lost Fanouts              ; ID:id_stage|reg_file:RF|Reg[8][3], ID:id_stage|reg_file:RF|Reg[9][3],                 ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[10][3], ID:id_stage|reg_file:RF|Reg[14][3],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[12][3], ID:id_stage|reg_file:RF|Reg[13][3],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[0][3], ID:id_stage|reg_file:RF|Reg[1][3],                 ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[2][3], ID:id_stage|reg_file:RF|Reg[3][3]                  ;
+; ID_EXE:id_exe|Val_1[4]                                   ; Lost Fanouts              ; ID:id_stage|reg_file:RF|Reg[8][4], ID:id_stage|reg_file:RF|Reg[9][4],                 ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[10][4], ID:id_stage|reg_file:RF|Reg[14][4],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[12][4], ID:id_stage|reg_file:RF|Reg[13][4],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[0][4], ID:id_stage|reg_file:RF|Reg[1][4],                 ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[2][4], ID:id_stage|reg_file:RF|Reg[3][4]                  ;
+; ID_EXE:id_exe|Val_1[5]                                   ; Lost Fanouts              ; ID:id_stage|reg_file:RF|Reg[8][5], ID:id_stage|reg_file:RF|Reg[9][5],                 ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[10][5], ID:id_stage|reg_file:RF|Reg[14][5],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[12][5], ID:id_stage|reg_file:RF|Reg[13][5],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[0][5], ID:id_stage|reg_file:RF|Reg[1][5],                 ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[2][5], ID:id_stage|reg_file:RF|Reg[3][5]                  ;
+; ID_EXE:id_exe|Val_1[6]                                   ; Lost Fanouts              ; ID:id_stage|reg_file:RF|Reg[8][6], ID:id_stage|reg_file:RF|Reg[9][6],                 ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[10][6], ID:id_stage|reg_file:RF|Reg[14][6],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[12][6], ID:id_stage|reg_file:RF|Reg[13][6],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[0][6], ID:id_stage|reg_file:RF|Reg[1][6],                 ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[2][6], ID:id_stage|reg_file:RF|Reg[3][6]                  ;
+; ID_EXE:id_exe|Val_1[7]                                   ; Lost Fanouts              ; ID:id_stage|reg_file:RF|Reg[8][7], ID:id_stage|reg_file:RF|Reg[9][7],                 ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[10][7], ID:id_stage|reg_file:RF|Reg[14][7],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[12][7], ID:id_stage|reg_file:RF|Reg[13][7],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[0][7], ID:id_stage|reg_file:RF|Reg[1][7],                 ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[2][7], ID:id_stage|reg_file:RF|Reg[3][7]                  ;
+; ID_EXE:id_exe|Val_1[8]                                   ; Lost Fanouts              ; ID:id_stage|reg_file:RF|Reg[8][8], ID:id_stage|reg_file:RF|Reg[9][8],                 ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[10][8], ID:id_stage|reg_file:RF|Reg[14][8],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[12][8], ID:id_stage|reg_file:RF|Reg[13][8],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[0][8], ID:id_stage|reg_file:RF|Reg[1][8],                 ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[2][8], ID:id_stage|reg_file:RF|Reg[3][8]                  ;
+; ID_EXE:id_exe|Val_1[9]                                   ; Lost Fanouts              ; ID:id_stage|reg_file:RF|Reg[8][9], ID:id_stage|reg_file:RF|Reg[9][9],                 ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[10][9], ID:id_stage|reg_file:RF|Reg[14][9],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[12][9], ID:id_stage|reg_file:RF|Reg[13][9],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[0][9], ID:id_stage|reg_file:RF|Reg[1][9],                 ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[2][9], ID:id_stage|reg_file:RF|Reg[3][9]                  ;
+; ID_EXE:id_exe|Val_1[11]                                  ; Lost Fanouts              ; ID:id_stage|reg_file:RF|Reg[8][11], ID:id_stage|reg_file:RF|Reg[9][11],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[10][11], ID:id_stage|reg_file:RF|Reg[14][11],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[12][11], ID:id_stage|reg_file:RF|Reg[13][11],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[0][11], ID:id_stage|reg_file:RF|Reg[1][11],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[2][11], ID:id_stage|reg_file:RF|Reg[3][11]                ;
+; ID_EXE:id_exe|Val_1[12]                                  ; Lost Fanouts              ; ID:id_stage|reg_file:RF|Reg[8][12], ID:id_stage|reg_file:RF|Reg[9][12],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[10][12], ID:id_stage|reg_file:RF|Reg[14][12],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[12][12], ID:id_stage|reg_file:RF|Reg[13][12],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[0][12], ID:id_stage|reg_file:RF|Reg[1][12],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[2][12], ID:id_stage|reg_file:RF|Reg[3][12]                ;
+; ID_EXE:id_exe|Val_1[13]                                  ; Lost Fanouts              ; ID:id_stage|reg_file:RF|Reg[8][13], ID:id_stage|reg_file:RF|Reg[9][13],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[10][13], ID:id_stage|reg_file:RF|Reg[14][13],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[12][13], ID:id_stage|reg_file:RF|Reg[13][13],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[0][13], ID:id_stage|reg_file:RF|Reg[1][13],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[2][13], ID:id_stage|reg_file:RF|Reg[3][13]                ;
+; ID_EXE:id_exe|Val_1[14]                                  ; Lost Fanouts              ; ID:id_stage|reg_file:RF|Reg[8][14], ID:id_stage|reg_file:RF|Reg[9][14],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[10][14], ID:id_stage|reg_file:RF|Reg[14][14],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[12][14], ID:id_stage|reg_file:RF|Reg[13][14],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[0][14], ID:id_stage|reg_file:RF|Reg[1][14],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[2][14], ID:id_stage|reg_file:RF|Reg[3][14]                ;
+; ID_EXE:id_exe|Val_1[15]                                  ; Lost Fanouts              ; ID:id_stage|reg_file:RF|Reg[8][15], ID:id_stage|reg_file:RF|Reg[9][15],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[10][15], ID:id_stage|reg_file:RF|Reg[14][15],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[12][15], ID:id_stage|reg_file:RF|Reg[13][15],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[0][15], ID:id_stage|reg_file:RF|Reg[1][15],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[2][15], ID:id_stage|reg_file:RF|Reg[3][15]                ;
+; ID_EXE:id_exe|Val_1[16]                                  ; Lost Fanouts              ; ID:id_stage|reg_file:RF|Reg[8][16], ID:id_stage|reg_file:RF|Reg[9][16],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[10][16], ID:id_stage|reg_file:RF|Reg[14][16],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[12][16], ID:id_stage|reg_file:RF|Reg[13][16],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[0][16], ID:id_stage|reg_file:RF|Reg[1][16],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[2][16], ID:id_stage|reg_file:RF|Reg[3][16]                ;
+; ID_EXE:id_exe|Val_1[17]                                  ; Lost Fanouts              ; ID:id_stage|reg_file:RF|Reg[8][17], ID:id_stage|reg_file:RF|Reg[9][17],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[10][17], ID:id_stage|reg_file:RF|Reg[14][17],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[12][17], ID:id_stage|reg_file:RF|Reg[13][17],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[0][17], ID:id_stage|reg_file:RF|Reg[1][17],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[2][17], ID:id_stage|reg_file:RF|Reg[3][17]                ;
+; ID_EXE:id_exe|Val_1[10]                                  ; Lost Fanouts              ; ID:id_stage|reg_file:RF|Reg[8][10], ID:id_stage|reg_file:RF|Reg[9][10],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[10][10], ID:id_stage|reg_file:RF|Reg[14][10],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[12][10], ID:id_stage|reg_file:RF|Reg[13][10],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[0][10], ID:id_stage|reg_file:RF|Reg[1][10],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[2][10], ID:id_stage|reg_file:RF|Reg[3][10]                ;
+; ID_EXE:id_exe|Val_1[18]                                  ; Lost Fanouts              ; ID:id_stage|reg_file:RF|Reg[8][18], ID:id_stage|reg_file:RF|Reg[9][18],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[10][18], ID:id_stage|reg_file:RF|Reg[14][18],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[12][18], ID:id_stage|reg_file:RF|Reg[13][18],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[0][18], ID:id_stage|reg_file:RF|Reg[1][18],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[2][18], ID:id_stage|reg_file:RF|Reg[3][18]                ;
+; ID_EXE:id_exe|Val_1[19]                                  ; Lost Fanouts              ; ID:id_stage|reg_file:RF|Reg[8][19], ID:id_stage|reg_file:RF|Reg[9][19],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[10][19], ID:id_stage|reg_file:RF|Reg[14][19],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[12][19], ID:id_stage|reg_file:RF|Reg[13][19],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[0][19], ID:id_stage|reg_file:RF|Reg[1][19],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[2][19], ID:id_stage|reg_file:RF|Reg[3][19]                ;
+; ID_EXE:id_exe|Val_1[20]                                  ; Lost Fanouts              ; ID:id_stage|reg_file:RF|Reg[8][20], ID:id_stage|reg_file:RF|Reg[9][20],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[10][20], ID:id_stage|reg_file:RF|Reg[14][20],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[12][20], ID:id_stage|reg_file:RF|Reg[13][20],             ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[0][20], ID:id_stage|reg_file:RF|Reg[1][20],               ;
+;                                                          ;                           ; ID:id_stage|reg_file:RF|Reg[2][20], ID:id_stage|reg_file:RF|Reg[3][20]                ;
+; MEM:mem_stage|Sram_Controller:SRAM_CONTROLLER|ps~4       ; Lost Fanouts              ; MEM:mem_stage|Sram_Controller:SRAM_CONTROLLER|ps.S_0,                                 ;
+;                                                          ;                           ; MEM:mem_stage|Sram_Controller:SRAM_CONTROLLER|ps.S_2,                                 ;
+;                                                          ;                           ; MEM:mem_stage|Sram_Controller:SRAM_CONTROLLER|ps.S_4                                  ;
+; MEM_WB:mem_wb|DataMemory_out[23]                         ; Lost Fanouts              ; EXE_MEM:exe_mem|Val_Rm_out[23], EXE_MEM:exe_mem|Val_Rm_out[7]                         ;
+; MEM_WB:mem_wb|DataMemory_out[22]                         ; Lost Fanouts              ; EXE_MEM:exe_mem|Val_Rm_out[22], EXE_MEM:exe_mem|Val_Rm_out[6]                         ;
+; MEM_WB:mem_wb|DataMemory_out[21]                         ; Lost Fanouts              ; EXE_MEM:exe_mem|Val_Rm_out[21], EXE_MEM:exe_mem|Val_Rm_out[5]                         ;
+; MEM_WB:mem_wb|DataMemory_out[20]                         ; Lost Fanouts              ; EXE_MEM:exe_mem|Val_Rm_out[20], EXE_MEM:exe_mem|Val_Rm_out[4]                         ;
+; MEM_WB:mem_wb|DataMemory_out[19]                         ; Lost Fanouts              ; EXE_MEM:exe_mem|Val_Rm_out[19], EXE_MEM:exe_mem|Val_Rm_out[3]                         ;
+; MEM_WB:mem_wb|DataMemory_out[17]                         ; Lost Fanouts              ; EXE_MEM:exe_mem|Val_Rm_out[17], EXE_MEM:exe_mem|Val_Rm_out[1]                         ;
+; MEM_WB:mem_wb|DataMemory_out[16]                         ; Lost Fanouts              ; EXE_MEM:exe_mem|Val_Rm_out[16], EXE_MEM:exe_mem|Val_Rm_out[0]                         ;
+; MEM_WB:mem_wb|DataMemory_out[18]                         ; Lost Fanouts              ; EXE_MEM:exe_mem|Val_Rm_out[18], EXE_MEM:exe_mem|Val_Rm_out[2]                         ;
+; MEM_WB:mem_wb|DataMemory_out[29]                         ; Lost Fanouts              ; EXE_MEM:exe_mem|Val_Rm_out[29], EXE_MEM:exe_mem|Val_Rm_out[13]                        ;
+; MEM_WB:mem_wb|DataMemory_out[31]                         ; Lost Fanouts              ; EXE_MEM:exe_mem|Val_Rm_out[31], EXE_MEM:exe_mem|Val_Rm_out[15]                        ;
+; MEM_WB:mem_wb|DataMemory_out[30]                         ; Lost Fanouts              ; EXE_MEM:exe_mem|Val_Rm_out[30], EXE_MEM:exe_mem|Val_Rm_out[14]                        ;
+; MEM_WB:mem_wb|DataMemory_out[24]                         ; Lost Fanouts              ; EXE_MEM:exe_mem|Val_Rm_out[24], EXE_MEM:exe_mem|Val_Rm_out[8]                         ;
+; MEM_WB:mem_wb|DataMemory_out[28]                         ; Lost Fanouts              ; EXE_MEM:exe_mem|Val_Rm_out[28], EXE_MEM:exe_mem|Val_Rm_out[12]                        ;
+; MEM_WB:mem_wb|DataMemory_out[27]                         ; Lost Fanouts              ; EXE_MEM:exe_mem|Val_Rm_out[27], EXE_MEM:exe_mem|Val_Rm_out[11]                        ;
+; MEM_WB:mem_wb|DataMemory_out[26]                         ; Lost Fanouts              ; EXE_MEM:exe_mem|Val_Rm_out[26], EXE_MEM:exe_mem|Val_Rm_out[10]                        ;
+; MEM_WB:mem_wb|DataMemory_out[25]                         ; Lost Fanouts              ; EXE_MEM:exe_mem|Val_Rm_out[25], EXE_MEM:exe_mem|Val_Rm_out[9]                         ;
+; MEM:mem_stage|Sram_Controller:SRAM_CONTROLLER|ps~5       ; Lost Fanouts              ; MEM:mem_stage|Sram_Controller:SRAM_CONTROLLER|ps.S_1                                  ;
+; MEM:mem_stage|Sram_Controller:SRAM_CONTROLLER|ps~6       ; Lost Fanouts              ; MEM:mem_stage|Sram_Controller:SRAM_CONTROLLER|ps.S_3                                  ;
+; ID_EXE:id_exe|PC_out[5]                                  ; Lost Fanouts              ; IF_ID:if_id|PC_out[5]                                                                 ;
+; ID_EXE:id_exe|Val_2_Generate_in_3[4]                     ; Lost Fanouts              ; IF_ID:if_id|instruction[4]                                                            ;
+; ID_EXE:id_exe|PC_out[6]                                  ; Lost Fanouts              ; IF_ID:if_id|PC_out[6]                                                                 ;
+; ID_EXE:id_exe|Val_2_Generate_in_3[7]                     ; Lost Fanouts              ; IF_ID:if_id|instruction[7]                                                            ;
+; ID_EXE:id_exe|PC_out[7]                                  ; Lost Fanouts              ; IF_ID:if_id|PC_out[7]                                                                 ;
+; ID_EXE:id_exe|PC_out[8]                                  ; Lost Fanouts              ; IF_ID:if_id|PC_out[8]                                                                 ;
+; ID_EXE:id_exe|PC_out[29]                                 ; Lost Fanouts              ; IF_ID:if_id|PC_out[29]                                                                ;
+; MEM_WB:mem_wb|WB_Dest[1]                                 ; Lost Fanouts              ; EXE_MEM:exe_mem|Dest_out[1]                                                           ;
+; ID_EXE:id_exe|PC_out[27]                                 ; Lost Fanouts              ; IF_ID:if_id|PC_out[27]                                                                ;
+; MEM_WB:mem_wb|WB_Dest[3]                                 ; Lost Fanouts              ; EXE_MEM:exe_mem|Dest_out[3]                                                           ;
+; ID_EXE:id_exe|PC_out[26]                                 ; Lost Fanouts              ; IF_ID:if_id|PC_out[26]                                                                ;
+; MEM_WB:mem_wb|WB_Dest[0]                                 ; Lost Fanouts              ; EXE_MEM:exe_mem|Dest_out[0]                                                           ;
+; ID_EXE:id_exe|PC_out[25]                                 ; Lost Fanouts              ; IF_ID:if_id|PC_out[25]                                                                ;
+; ID_EXE:id_exe|PC_out[31]                                 ; Lost Fanouts              ; IF_ID:if_id|PC_out[31]                                                                ;
+; ID_EXE:id_exe|PC_out[24]                                 ; Lost Fanouts              ; IF_ID:if_id|PC_out[24]                                                                ;
+; ID_EXE:id_exe|PC_out[23]                                 ; Lost Fanouts              ; IF_ID:if_id|PC_out[23]                                                                ;
+; ID_EXE:id_exe|PC_out[22]                                 ; Lost Fanouts              ; IF_ID:if_id|PC_out[22]                                                                ;
+; ID_EXE:id_exe|PC_out[28]                                 ; Lost Fanouts              ; IF_ID:if_id|PC_out[28]                                                                ;
+; ID_EXE:id_exe|PC_out[21]                                 ; Lost Fanouts              ; IF_ID:if_id|PC_out[21]                                                                ;
+; ID_EXE:id_exe|PC_out[30]                                 ; Lost Fanouts              ; IF_ID:if_id|PC_out[30]                                                                ;
+; ID_EXE:id_exe|PC_out[20]                                 ; Lost Fanouts              ; IF_ID:if_id|PC_out[20]                                                                ;
+; ID_EXE:id_exe|PC_out[19]                                 ; Lost Fanouts              ; IF_ID:if_id|PC_out[19]                                                                ;
+; ID_EXE:id_exe|PC_out[18]                                 ; Lost Fanouts              ; IF_ID:if_id|PC_out[18]                                                                ;
+; ID_EXE:id_exe|PC_out[17]                                 ; Lost Fanouts              ; IF_ID:if_id|PC_out[17]                                                                ;
+; ID_EXE:id_exe|PC_out[16]                                 ; Lost Fanouts              ; IF_ID:if_id|PC_out[16]                                                                ;
+; ID_EXE:id_exe|Val_2_Generate_in_3[6]                     ; Lost Fanouts              ; IF_ID:if_id|instruction[6]                                                            ;
+; ID_EXE:id_exe|PC_out[15]                                 ; Lost Fanouts              ; IF_ID:if_id|PC_out[15]                                                                ;
+; ID_EXE:id_exe|PC_out[14]                                 ; Lost Fanouts              ; IF_ID:if_id|PC_out[14]                                                                ;
+; ID_EXE:id_exe|PC_out[13]                                 ; Lost Fanouts              ; IF_ID:if_id|PC_out[13]                                                                ;
+; ID_EXE:id_exe|PC_out[12]                                 ; Lost Fanouts              ; IF_ID:if_id|PC_out[12]                                                                ;
+; ID_EXE:id_exe|Val_2_Generate_in_3[10]                    ; Lost Fanouts              ; IF_ID:if_id|instruction[10]                                                           ;
+; ID_EXE:id_exe|PC_out[11]                                 ; Lost Fanouts              ; IF_ID:if_id|PC_out[11]                                                                ;
+; ID_EXE:id_exe|PC_out[10]                                 ; Lost Fanouts              ; IF_ID:if_id|PC_out[10]                                                                ;
+; ID_EXE:id_exe|Val_2_Generate_in_3[8]                     ; Lost Fanouts              ; IF_ID:if_id|instruction[8]                                                            ;
+; ID_EXE:id_exe|PC_out[9]                                  ; Lost Fanouts              ; IF_ID:if_id|PC_out[9]                                                                 ;
+; MEM_WB:mem_wb|WB_Dest[2]                                 ; Lost Fanouts              ; EXE_MEM:exe_mem|Dest_out[2]                                                           ;
++----------------------------------------------------------+---------------------------+---------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
+; 3:1                ; 70 bits   ; 140 LEs       ; 70 LEs               ; 70 LEs                 ; Yes        ; |ARM|MEM_WB:mem_wb|ALU_Res_out[4]                             ;
+; 3:1                ; 62 bits   ; 124 LEs       ; 62 LEs               ; 62 LEs                 ; Yes        ; |ARM|ID_EXE:id_exe|Signed_EX_imm24[15]                        ;
+; 3:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; Yes        ; |ARM|IF_ID:if_id|PC_out[13]                                   ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |ARM|ID_EXE:id_exe|EXE_CMD_out[1]                             ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 6 LEs                ; 14 LEs                 ; Yes        ; |ARM|EXE:exec_stage|Status_Register:status_reg|Status_out[29] ;
+; 17:1               ; 32 bits   ; 352 LEs       ; 320 LEs              ; 32 LEs                 ; Yes        ; |ARM|ID_EXE:id_exe|Val_2_Generate_in_1[1]                     ;
+; 17:1               ; 32 bits   ; 352 LEs       ; 320 LEs              ; 32 LEs                 ; Yes        ; |ARM|ID_EXE:id_exe|Val_1[24]                                  ;
+; 96:1               ; 8 bits    ; 512 LEs       ; 400 LEs              ; 112 LEs                ; Yes        ; |ARM|IF_ID:if_id|instruction[2]                               ;
+; 96:1               ; 8 bits    ; 512 LEs       ; 424 LEs              ; 88 LEs                 ; Yes        ; |ARM|IF_ID:if_id|instruction[17]                              ;
+; 96:1               ; 8 bits    ; 512 LEs       ; 384 LEs              ; 128 LEs                ; Yes        ; |ARM|IF_ID:if_id|instruction[29]                              ;
+; 96:1               ; 8 bits    ; 512 LEs       ; 448 LEs              ; 64 LEs                 ; Yes        ; |ARM|IF_ID:if_id|instruction[8]                               ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |ARM|EXE:exec_stage|mux_32_bit_3_to_1:mux1_exe|out[11]        ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |ARM|EXE:exec_stage|mux_32_bit_3_to_1:mux2_exe|out[19]        ;
+; 16:1               ; 30 bits   ; 300 LEs       ; 180 LEs              ; 120 LEs                ; No         ; |ARM|EXE:exec_stage|ALU:alu_exe|Mux23                         ;
+; 9:1                ; 8 bits    ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; No         ; |ARM|EXE:exec_stage|Val_2Generate:Val_2Gen|Val_2[11]          ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 24 LEs               ; 12 LEs                 ; No         ; |ARM|EXE:exec_stage|Val_2Generate:Val_2Gen|Val_2[6]           ;
+; 10:1               ; 6 bits    ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; No         ; |ARM|EXE:exec_stage|Val_2Generate:Val_2Gen|Val_2[20]          ;
+; 11:1               ; 4 bits    ; 28 LEs        ; 24 LEs               ; 4 LEs                  ; No         ; |ARM|EXE:exec_stage|Val_2Generate:Val_2Gen|Val_2[27]          ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 14 LEs               ; 2 LEs                  ; No         ; |ARM|EXE:exec_stage|Val_2Generate:Val_2Gen|Val_2[29]          ;
+; 13:1               ; 2 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |ARM|EXE:exec_stage|Val_2Generate:Val_2Gen|Val_2[30]          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: hazard_Detection_Unit:HazardDetectionUnit ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; MOV            ; 0001  ; Unsigned Binary                                               ;
+; MVN            ; 1001  ; Unsigned Binary                                               ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ID:id_stage|ID_controlUnit:ID_CU ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; MOV            ; 1101  ; Unsigned Binary                                      ;
+; MVN            ; 1111  ; Unsigned Binary                                      ;
+; ADD            ; 0100  ; Unsigned Binary                                      ;
+; ADC            ; 0101  ; Unsigned Binary                                      ;
+; SUB            ; 0010  ; Unsigned Binary                                      ;
+; SBC            ; 0110  ; Unsigned Binary                                      ;
+; AND            ; 0000  ; Unsigned Binary                                      ;
+; ORR            ; 1100  ; Unsigned Binary                                      ;
+; EOR            ; 0001  ; Unsigned Binary                                      ;
+; CMP            ; 1010  ; Unsigned Binary                                      ;
+; TST            ; 0000  ; Unsigned Binary                                      ;
+; LDR            ; 0100  ; Unsigned Binary                                      ;
+; STR            ; 0100  ; Unsigned Binary                                      ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MEM:mem_stage|Sram_Controller:SRAM_CONTROLLER ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; S_0            ; 000   ; Unsigned Binary                                                   ;
+; S_1            ; 001   ; Unsigned Binary                                                   ;
+; S_2            ; 010   ; Unsigned Binary                                                   ;
+; S_3            ; 011   ; Unsigned Binary                                                   ;
+; S_4            ; 100   ; Unsigned Binary                                                   ;
+; S_5            ; 101   ; Unsigned Binary                                                   ;
++----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "WB:wb_stage"                                                                          ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; pc_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MEM:mem_stage|Sram_Controller:SRAM_CONTROLLER"                                                                ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                  ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; SRAM_UB_N ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; SRAM_LB_N ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; SRAM_CE_N ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; SRAM_OE_N ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------+
+; Port Connectivity Checks: "EXE:exec_stage|Adder_32_EXE:adder_32" ;
++-----------+-------+----------+-----------------------------------+
+; Port      ; Type  ; Severity ; Details                           ;
++-----------+-------+----------+-----------------------------------+
+; in2[1..0] ; Input ; Info     ; Stuck at GND                      ;
++-----------+-------+----------+-----------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Port Connectivity Checks: "hazard_Detection_Unit:HazardDetectionUnit" ;
++---------------+-------+----------+------------------------------------+
+; Port          ; Type  ; Severity ; Details                            ;
++---------------+-------+----------+------------------------------------+
+; hasForwarding ; Input ; Info     ; Stuck at VCC                       ;
++---------------+-------+----------+------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sat Feb 04 21:10:01 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ARM -c ARM
+Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (12021): Found 1 design units, including 1 entities, in source file wb.v
+    Info (12023): Found entity 1: WB
+Info (12021): Found 1 design units, including 1 entities, in source file sram_controller.v
+    Info (12023): Found entity 1: Sram_Controller
+Info (12021): Found 1 design units, including 1 entities, in source file sram.v
+    Info (12023): Found entity 1: SRAM
+Info (12021): Found 1 design units, including 1 entities, in source file mem_wb.v
+    Info (12023): Found entity 1: MEM_WB
+Info (12021): Found 1 design units, including 1 entities, in source file mem.v
+    Info (12023): Found entity 1: MEM
+Info (12021): Found 1 design units, including 1 entities, in source file if_id.v
+    Info (12023): Found entity 1: IF_ID
+Info (12021): Found 5 design units, including 5 entities, in source file if.v
+    Info (12023): Found entity 1: IF
+    Info (12023): Found entity 2: Adder
+    Info (12023): Found entity 3: inst_mem
+    Info (12023): Found entity 4: IF_MUX
+    Info (12023): Found entity 5: PC_reg
+Info (12021): Found 1 design units, including 1 entities, in source file id_exe.v
+    Info (12023): Found entity 1: ID_EXE
+Warning (10229): Verilog HDL Expression warning at ID.v(194): truncated literal to match 4 bits
+Info (12021): Found 8 design units, including 8 entities, in source file id.v
+    Info (12023): Found entity 1: ID
+    Info (12023): Found entity 2: reg_file
+    Info (12023): Found entity 3: ID_controlUnit
+    Info (12023): Found entity 4: Condition_Check
+    Info (12023): Found entity 5: Not_1_bit
+    Info (12023): Found entity 6: Or_1_bit
+    Info (12023): Found entity 7: Mux2_4_bit
+    Info (12023): Found entity 8: Mux2_9_bit
+Info (12021): Found 1 design units, including 1 entities, in source file hazard_detection_unit.v
+    Info (12023): Found entity 1: hazard_Detection_Unit
+Info (12021): Found 1 design units, including 1 entities, in source file forwarding_unit.v
+    Info (12023): Found entity 1: Forwarding_Unit
+Info (12021): Found 1 design units, including 1 entities, in source file exe_mem.v
+    Info (12023): Found entity 1: EXE_MEM
+Info (12021): Found 7 design units, including 7 entities, in source file exe.v
+    Info (12023): Found entity 1: EXE
+    Info (12023): Found entity 2: ALU
+    Info (12023): Found entity 3: Status_Register
+    Info (12023): Found entity 4: Adder_32_EXE
+    Info (12023): Found entity 5: Or_1_bit_EXE
+    Info (12023): Found entity 6: mux_32_bit_3_to_1
+    Info (12023): Found entity 7: Val_2Generate
+Info (12021): Found 1 design units, including 1 entities, in source file arm.v
+    Info (12023): Found entity 1: ARM
+Warning (10236): Verilog HDL Implicit Net warning at ARM.v(226): created implicit net for "s_exe_in"
+Info (12127): Elaborating entity "ARM" for the top level hierarchy
+Info (12128): Elaborating entity "IF" for hierarchy "IF:if_stage"
+Info (12128): Elaborating entity "Adder" for hierarchy "IF:if_stage|Adder:adder"
+Info (12128): Elaborating entity "inst_mem" for hierarchy "IF:if_stage|inst_mem:mem"
+Info (12128): Elaborating entity "IF_MUX" for hierarchy "IF:if_stage|IF_MUX:mux"
+Info (12128): Elaborating entity "PC_reg" for hierarchy "IF:if_stage|PC_reg:pc_reg"
+Info (12128): Elaborating entity "IF_ID" for hierarchy "IF_ID:if_id"
+Info (12128): Elaborating entity "hazard_Detection_Unit" for hierarchy "hazard_Detection_Unit:HazardDetectionUnit"
+Warning (10240): Verilog HDL Always Construct warning at hazard_Detection_Unit.v(20): inferring latch(es) for variable "hazard_detected", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "hazard_detected" at hazard_Detection_Unit.v(31)
+Info (12128): Elaborating entity "ID" for hierarchy "ID:id_stage"
+Info (12128): Elaborating entity "reg_file" for hierarchy "ID:id_stage|reg_file:RF"
+Info (12128): Elaborating entity "ID_controlUnit" for hierarchy "ID:id_stage|ID_controlUnit:ID_CU"
+Warning (10272): Verilog HDL Case Statement warning at ID.v(211): case item expression covers a value already covered by a previous case item
+Info (12128): Elaborating entity "Condition_Check" for hierarchy "ID:id_stage|Condition_Check:cond_check"
+Info (12128): Elaborating entity "Not_1_bit" for hierarchy "ID:id_stage|Not_1_bit:not_1"
+Info (12128): Elaborating entity "Or_1_bit" for hierarchy "ID:id_stage|Or_1_bit:or_1"
+Info (12128): Elaborating entity "Mux2_9_bit" for hierarchy "ID:id_stage|Mux2_9_bit:mux_1"
+Info (12128): Elaborating entity "Mux2_4_bit" for hierarchy "ID:id_stage|Mux2_4_bit:mux_2"
+Info (12128): Elaborating entity "ID_EXE" for hierarchy "ID_EXE:id_exe"
+Info (12128): Elaborating entity "EXE" for hierarchy "EXE:exec_stage"
+Info (12128): Elaborating entity "ALU" for hierarchy "EXE:exec_stage|ALU:alu_exe"
+Info (12128): Elaborating entity "Status_Register" for hierarchy "EXE:exec_stage|Status_Register:status_reg"
+Info (12128): Elaborating entity "Adder_32_EXE" for hierarchy "EXE:exec_stage|Adder_32_EXE:adder_32"
+Info (12128): Elaborating entity "Or_1_bit_EXE" for hierarchy "EXE:exec_stage|Or_1_bit_EXE:or_1"
+Info (12128): Elaborating entity "mux_32_bit_3_to_1" for hierarchy "EXE:exec_stage|mux_32_bit_3_to_1:mux1_exe"
+Info (12128): Elaborating entity "Val_2Generate" for hierarchy "EXE:exec_stage|Val_2Generate:Val_2Gen"
+Warning (10240): Verilog HDL Always Construct warning at EXE.v(164): inferring latch(es) for variable "tmp", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at EXE.v(164): inferring latch(es) for variable "Val_2", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "Val_2[0]" at EXE.v(182)
+Info (10041): Inferred latch for "Val_2[1]" at EXE.v(182)
+Info (10041): Inferred latch for "Val_2[2]" at EXE.v(182)
+Info (10041): Inferred latch for "Val_2[3]" at EXE.v(182)
+Info (10041): Inferred latch for "Val_2[4]" at EXE.v(182)
+Info (10041): Inferred latch for "Val_2[5]" at EXE.v(182)
+Info (10041): Inferred latch for "Val_2[6]" at EXE.v(182)
+Info (10041): Inferred latch for "Val_2[7]" at EXE.v(182)
+Info (10041): Inferred latch for "Val_2[8]" at EXE.v(182)
+Info (10041): Inferred latch for "Val_2[9]" at EXE.v(182)
+Info (10041): Inferred latch for "Val_2[10]" at EXE.v(182)
+Info (10041): Inferred latch for "Val_2[11]" at EXE.v(182)
+Info (10041): Inferred latch for "Val_2[12]" at EXE.v(182)
+Info (10041): Inferred latch for "Val_2[13]" at EXE.v(182)
+Info (10041): Inferred latch for "Val_2[14]" at EXE.v(182)
+Info (10041): Inferred latch for "Val_2[15]" at EXE.v(182)
+Info (10041): Inferred latch for "Val_2[16]" at EXE.v(182)
+Info (10041): Inferred latch for "Val_2[17]" at EXE.v(182)
+Info (10041): Inferred latch for "Val_2[18]" at EXE.v(182)
+Info (10041): Inferred latch for "Val_2[19]" at EXE.v(182)
+Info (10041): Inferred latch for "Val_2[20]" at EXE.v(182)
+Info (10041): Inferred latch for "Val_2[21]" at EXE.v(182)
+Info (10041): Inferred latch for "Val_2[22]" at EXE.v(182)
+Info (10041): Inferred latch for "Val_2[23]" at EXE.v(182)
+Info (10041): Inferred latch for "Val_2[24]" at EXE.v(182)
+Info (10041): Inferred latch for "Val_2[25]" at EXE.v(182)
+Info (10041): Inferred latch for "Val_2[26]" at EXE.v(182)
+Info (10041): Inferred latch for "Val_2[27]" at EXE.v(182)
+Info (10041): Inferred latch for "Val_2[28]" at EXE.v(182)
+Info (10041): Inferred latch for "Val_2[29]" at EXE.v(182)
+Info (10041): Inferred latch for "Val_2[30]" at EXE.v(182)
+Info (10041): Inferred latch for "Val_2[31]" at EXE.v(182)
+Info (12128): Elaborating entity "EXE_MEM" for hierarchy "EXE_MEM:exe_mem"
+Info (12128): Elaborating entity "MEM" for hierarchy "MEM:mem_stage"
+Info (12128): Elaborating entity "Sram_Controller" for hierarchy "MEM:mem_stage|Sram_Controller:SRAM_CONTROLLER"
+Warning (10235): Verilog HDL Always Construct warning at Sram_Controller.v(73): variable "address" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10230): Verilog HDL assignment warning at Sram_Controller.v(73): truncated value with size 32 to match size of target (18)
+Warning (10235): Verilog HDL Always Construct warning at Sram_Controller.v(79): variable "address" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10230): Verilog HDL assignment warning at Sram_Controller.v(79): truncated value with size 32 to match size of target (18)
+Warning (10235): Verilog HDL Always Construct warning at Sram_Controller.v(89): variable "address" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10230): Verilog HDL assignment warning at Sram_Controller.v(89): truncated value with size 32 to match size of target (18)
+Warning (10235): Verilog HDL Always Construct warning at Sram_Controller.v(95): variable "address" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10230): Verilog HDL assignment warning at Sram_Controller.v(95): truncated value with size 32 to match size of target (18)
+Warning (10235): Verilog HDL Always Construct warning at Sram_Controller.v(97): variable "SRAM_DQ" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Sram_Controller.v(105): variable "SRAM_DQ" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10240): Verilog HDL Always Construct warning at Sram_Controller.v(54): inferring latch(es) for variable "SRAM_ADDR", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Sram_Controller.v(54): inferring latch(es) for variable "readData", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "readData[0]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "readData[1]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "readData[2]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "readData[3]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "readData[4]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "readData[5]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "readData[6]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "readData[7]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "readData[8]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "readData[9]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "readData[10]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "readData[11]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "readData[12]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "readData[13]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "readData[14]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "readData[15]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "readData[16]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "readData[17]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "readData[18]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "readData[19]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "readData[20]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "readData[21]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "readData[22]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "readData[23]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "readData[24]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "readData[25]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "readData[26]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "readData[27]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "readData[28]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "readData[29]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "readData[30]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "readData[31]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "SRAM_ADDR[0]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "SRAM_ADDR[1]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "SRAM_ADDR[2]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "SRAM_ADDR[3]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "SRAM_ADDR[4]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "SRAM_ADDR[5]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "SRAM_ADDR[6]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "SRAM_ADDR[7]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "SRAM_ADDR[8]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "SRAM_ADDR[9]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "SRAM_ADDR[10]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "SRAM_ADDR[11]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "SRAM_ADDR[12]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "SRAM_ADDR[13]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "SRAM_ADDR[14]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "SRAM_ADDR[15]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "SRAM_ADDR[16]" at Sram_Controller.v(54)
+Info (10041): Inferred latch for "SRAM_ADDR[17]" at Sram_Controller.v(54)
+Info (12128): Elaborating entity "SRAM" for hierarchy "SRAM:sram"
+Info (12128): Elaborating entity "MEM_WB" for hierarchy "MEM_WB:mem_wb"
+Info (12128): Elaborating entity "Forwarding_Unit" for hierarchy "Forwarding_Unit:forwardingUnit"
+Info (12128): Elaborating entity "WB" for hierarchy "WB:wb_stage"
+Warning (14026): LATCH primitive "hazard_Detection_Unit:HazardDetectionUnit|hazard_detected" is permanently enabled
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "SRAM:sram|memory" is uninferred due to asynchronous read logic
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (17049): 855 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM_FPGA/output_files/ARM.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk"
+    Warning (15610): No output dependent on input pin "rst"
+Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 0 output pins
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 23 warnings
+    Info: Peak virtual memory: 4616 megabytes
+    Info: Processing ended: Sat Feb 04 21:10:06 2023
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:04
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM_FPGA/output_files/ARM.map.smsg.
+
+

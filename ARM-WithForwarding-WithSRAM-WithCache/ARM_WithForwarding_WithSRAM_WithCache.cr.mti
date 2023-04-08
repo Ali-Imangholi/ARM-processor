@@ -1,0 +1,131 @@
+C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/WB.v {1 {vlog -work work -stats=none C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/WB.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module WB
+
+Top level modules:
+	WB
+
+} {} {}} C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/SRAM.v {1 {vlog -work work -stats=none C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/SRAM.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module SRAM
+
+Top level modules:
+	SRAM
+
+} {} {}} C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/ID.v {2 {vlog -work work -stats=none C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/ID.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ID
+-- Compiling module reg_file
+-- Compiling module ID_controlUnit
+** Warning: C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/ID.v(194): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+-- Compiling module Condition_Check
+-- Compiling module Not_1_bit
+-- Compiling module Or_1_bit
+-- Compiling module Mux2_4_bit
+-- Compiling module Mux2_9_bit
+
+Top level modules:
+	ID
+
+} {} {}} C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/Sram_Controller.v {1 {vlog -work work -stats=none C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/Sram_Controller.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Sram_Controller
+
+Top level modules:
+	Sram_Controller
+
+} {} {}} C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/tb.v {1 {vlog -work work -stats=none C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb
+
+Top level modules:
+	tb
+
+} {} {}} C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/IF.v {1 {vlog -work work -stats=none C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/IF.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module IF
+-- Compiling module Adder
+-- Compiling module inst_mem
+-- Compiling module IF_MUX
+-- Compiling module PC_reg
+
+Top level modules:
+	IF
+
+} {} {}} C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/ARM.v {1 {vlog -work work -stats=none C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/ARM.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ARM
+
+Top level modules:
+	ARM
+
+} {} {}} C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/EXE_MEM.v {1 {vlog -work work -stats=none C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/EXE_MEM.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module EXE_MEM
+
+Top level modules:
+	EXE_MEM
+
+} {} {}} C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/EXE.v {1 {vlog -work work -stats=none C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/EXE.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module EXE
+-- Compiling module ALU
+-- Compiling module Status_Register
+-- Compiling module Adder_32_EXE
+-- Compiling module Or_1_bit_EXE
+-- Compiling module mux_32_bit_3_to_1
+-- Compiling module Val_2Generate
+
+Top level modules:
+	EXE
+
+} {} {}} C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/Forwarding_Unit.v {1 {vlog -work work -stats=none C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/Forwarding_Unit.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Forwarding_Unit
+
+Top level modules:
+	Forwarding_Unit
+
+} {} {}} C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/IF_ID.v {1 {vlog -work work -stats=none C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/IF_ID.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module IF_ID
+
+Top level modules:
+	IF_ID
+
+} {} {}} C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/ID_EXE.v {1 {vlog -work work -stats=none C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/ID_EXE.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ID_EXE
+
+Top level modules:
+	ID_EXE
+
+} {} {}} C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/cache_controller.v {1 {vlog -work work -stats=none C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/cache_controller.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module cache_controller
+
+Top level modules:
+	cache_controller
+
+} {} {}} C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/MEM.v {1 {vlog -work work -stats=none C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/MEM.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module MEM
+
+Top level modules:
+	MEM
+
+} {} {}} C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/MEM_WB.v {1 {vlog -work work -stats=none C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/MEM_WB.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module MEM_WB
+
+Top level modules:
+	MEM_WB
+
+} {} {}} C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/hazard_Detection_Unit.v {1 {vlog -work work -stats=none C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/hazard_Detection_Unit.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module hazard_Detection_Unit
+
+Top level modules:
+	hazard_Detection_Unit
+
+} {} {}}

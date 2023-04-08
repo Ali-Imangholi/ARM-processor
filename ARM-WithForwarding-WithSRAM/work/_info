@@ -1,0 +1,775 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Windows/system32
+vAdder
+Z0 !s110 1675540393
+!i10b 1
+!s100 VJ8fao:2LagmbDo^iR?HV2
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IGaBcQj>4^DDH:773a>F4c0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM
+Z4 w1669109268
+Z5 8C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/IF.v
+Z6 FC:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/IF.v
+!i122 1654
+L0 27 3
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1675540392.000000
+Z9 !s107 C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/IF.v|
+Z10 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/IF.v|
+!i113 1
+Z11 o-work work
+Z12 tCvgOpt 0
+n@adder
+vAdder_32_EXE
+Z13 !s110 1675540390
+!i10b 1
+!s100 G7AjYgQEYH5Ii>O]mTFG13
+R1
+Il4zjPbjMRFBzedG3iDed90
+R2
+R3
+Z14 w1671969995
+Z15 8C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/EXE.v
+Z16 FC:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/EXE.v
+!i122 1648
+L0 128 3
+R7
+r1
+!s85 0
+31
+Z17 !s108 1675540390.000000
+Z18 !s107 C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/EXE.v|
+Z19 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/EXE.v|
+!i113 1
+R11
+R12
+n@adder_32_@e@x@e
+vALU
+R13
+!i10b 1
+!s100 67`3?03c9m4I[3M2JdAA?3
+R1
+I?c>CU[]KW>4W6G68Ijj413
+R2
+R3
+R14
+R15
+R16
+!i122 1648
+L0 85 27
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!i113 1
+R11
+R12
+n@a@l@u
+vARM
+!s110 1675540389
+!i10b 1
+!s100 E:NDJ_Y>4UQ1T1dE<ccz<0
+R1
+IOS8:aO@dY1`iHiU?AG]n@2
+R2
+R3
+w1672697974
+8C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/ARM.v
+FC:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/ARM.v
+!i122 1647
+L0 1 392
+R7
+r1
+!s85 0
+31
+!s108 1675540389.000000
+!s107 C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/ARM.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/ARM.v|
+!i113 1
+R11
+R12
+n@a@r@m
+vCondition_Check
+Z20 !s110 1675540392
+!i10b 1
+!s100 Y8]45GE3LNf:<PBZ`IdiN3
+R1
+I@[;GO^KAV8`P:FLTz1d6<2
+R2
+R3
+Z21 w1670923953
+Z22 8C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/ID.v
+Z23 FC:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/ID.v
+!i122 1652
+L0 233 26
+R7
+r1
+!s85 0
+31
+R8
+Z24 !s107 C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/ID.v|
+Z25 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/ID.v|
+!i113 1
+R11
+R12
+n@condition_@check
+vEXE
+R13
+!i10b 1
+!s100 LNO:@hNfd2BmhB`2nV0G72
+R1
+I9R^0XI?I7n60<bh]Iznd61
+R2
+R3
+R14
+R15
+R16
+!i122 1648
+L0 1 77
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!i113 1
+R11
+R12
+n@e@x@e
+vEXE_MEM
+R13
+!i10b 1
+!s100 >D``iELPYheIB<c0zTQ@E2
+R1
+IfVPTC@:<o7MX7^m]`fZbF1
+R2
+R3
+w1672662282
+8C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/EXE_MEM.v
+FC:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/EXE_MEM.v
+!i122 1649
+L0 1 45
+R7
+r1
+!s85 0
+31
+R17
+!s107 C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/EXE_MEM.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/EXE_MEM.v|
+!i113 1
+R11
+R12
+n@e@x@e_@m@e@m
+vForwarding_Unit
+Z26 !s110 1675540391
+!i10b 1
+!s100 ]W>a1=MAmYU=SERXF<84H2
+R1
+I^bDkjkO@?KVOPB4<Kz=WL3
+R2
+R3
+w1670000528
+8C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/Forwarding_Unit.v
+FC:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/Forwarding_Unit.v
+!i122 1650
+L0 1 32
+R7
+r1
+!s85 0
+31
+R17
+!s107 C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/Forwarding_Unit.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/Forwarding_Unit.v|
+!i113 1
+R11
+R12
+n@forwarding_@unit
+vhazard_Detection_Unit
+R26
+!i10b 1
+!s100 7:^:giO9j1@?ROiR2Mz;c0
+R1
+I82W>bHaD2hbY9_ll_hEVF0
+R2
+R3
+w1671047296
+8C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/hazard_Detection_Unit.v
+FC:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/hazard_Detection_Unit.v
+!i122 1651
+L0 1 51
+R7
+r1
+!s85 0
+31
+!s108 1675540391.000000
+!s107 C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/hazard_Detection_Unit.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/hazard_Detection_Unit.v|
+!i113 1
+R11
+R12
+nhazard_@detection_@unit
+vID
+R20
+!i10b 1
+!s100 Ui`7T?UF?ki6]23kM3dEE2
+R1
+IiE=?anHPhQB>P;42aDMSF2
+R2
+R3
+R21
+R22
+R23
+!i122 1652
+L0 1 137
+R7
+r1
+!s85 0
+31
+R8
+R24
+R25
+!i113 1
+R11
+R12
+n@i@d
+vID_controlUnit
+R20
+!i10b 1
+!s100 GTL`n07MO>UN`fE=QC:`G3
+R1
+Ia4ohkHD6f6UgAMHFzRe^z3
+R2
+R3
+R21
+R22
+R23
+!i122 1652
+L0 178 49
+R7
+r1
+!s85 0
+31
+R8
+R24
+R25
+!i113 1
+R11
+R12
+n@i@d_control@unit
+vID_EXE
+R20
+!i10b 1
+!s100 ;I9_VB5C`ZGa6G727[2QW3
+R1
+IzKb1FUCA_l`caJjJBYQ1X3
+R2
+R3
+w1672662181
+8C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/ID_EXE.v
+FC:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/ID_EXE.v
+!i122 1653
+L0 1 84
+R7
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/ID_EXE.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/ID_EXE.v|
+!i113 1
+R11
+R12
+n@i@d_@e@x@e
+vIF
+R0
+!i10b 1
+!s100 7NXL3KZAjb^D>=L0eVKkZ1
+R1
+IJin>>_5aH^<E`z3Fzle_f3
+R2
+R3
+R4
+R5
+R6
+!i122 1654
+L0 1 21
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+n@i@f
+vIF_ID
+Z27 !s110 1675540394
+!i10b 1
+!s100 zR5dTnmOlT]mX<82Pg3Wz1
+R1
+IeF50C9^KKg]z[JBbEP=dg3
+R2
+R3
+w1670015377
+8C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/IF_ID.v
+FC:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/IF_ID.v
+!i122 1655
+L0 1 25
+R7
+r1
+!s85 0
+31
+!s108 1675540393.000000
+!s107 C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/IF_ID.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/IF_ID.v|
+!i113 1
+R11
+R12
+n@i@f_@i@d
+vIF_MUX
+R0
+!i10b 1
+!s100 DEMgWOS;VX<LazG90>jk43
+R1
+I;E:fWW_j]EoBYW4:hUG^e2
+R2
+R3
+R4
+R5
+R6
+!i122 1654
+L0 91 10
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+n@i@f_@m@u@x
+vinst_mem
+R0
+!i10b 1
+!s100 _Amnl4dLo[Bl]b0`CM8223
+R1
+I0o?SgOEi5TLiK:O4QAEA20
+R2
+R3
+R4
+R5
+R6
+!i122 1654
+L0 34 53
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+vMEM
+R27
+!i10b 1
+!s100 IVBKZkOJ:c_>R7^^k_MHB1
+R1
+IS=PPTN8hNb5j@g>4^z9ZW0
+R2
+R3
+w1675521406
+8C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/MEM.v
+FC:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/MEM.v
+!i122 1656
+L0 1 47
+R7
+r1
+!s85 0
+31
+Z28 !s108 1675540394.000000
+!s107 C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/MEM.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/MEM.v|
+!i113 1
+R11
+R12
+n@m@e@m
+vMEM_WB
+Z29 !s110 1675540395
+!i10b 1
+!s100 KNj169@Xh[`@F;CbU]hKg1
+R1
+IZAQ8BI=9J1M:J^`1MGoL90
+R2
+R3
+w1672662438
+8C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/MEM_WB.v
+FC:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/MEM_WB.v
+!i122 1657
+L0 1 41
+R7
+r1
+!s85 0
+31
+R28
+!s107 C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/MEM_WB.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/MEM_WB.v|
+!i113 1
+R11
+R12
+n@m@e@m_@w@b
+vMux2_4_bit
+R20
+!i10b 1
+!s100 @I7HL:=I^gG9Bek:CI3h71
+R1
+I9FV3Jjb6AmVgeFW5Qe^6O3
+R2
+R3
+R21
+R22
+R23
+!i122 1652
+L0 273 3
+R7
+r1
+!s85 0
+31
+R8
+R24
+R25
+!i113 1
+R11
+R12
+n@mux2_4_bit
+vMux2_9_bit
+R20
+!i10b 1
+!s100 SlnQ?cmMAzQ[3zIWM0``k3
+R1
+I4KzT3b]?eeKYZX^O6QKH_3
+R2
+R3
+R21
+R22
+R23
+!i122 1652
+L0 277 3
+R7
+r1
+!s85 0
+31
+R8
+R24
+R25
+!i113 1
+R11
+R12
+n@mux2_9_bit
+vmux_32_bit_3_to_1
+R13
+!i10b 1
+!s100 hLzXeALc0THXJF:<G=KWY3
+R1
+Ib8A1cZ7`2VO@R8;hkg`mH2
+R2
+R3
+R14
+R15
+R16
+!i122 1648
+L0 142 3
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!i113 1
+R11
+R12
+vNot_1_bit
+R20
+!i10b 1
+!s100 L4YiKOMSJAbFV^A9SHKC13
+R1
+IoTnA:XMnYQI[VAa6BjnER2
+R2
+R3
+R21
+R22
+R23
+!i122 1652
+L0 265 3
+R7
+r1
+!s85 0
+31
+R8
+R24
+R25
+!i113 1
+R11
+R12
+n@not_1_bit
+vOr_1_bit
+R20
+!i10b 1
+!s100 >6O>7Wc5lDE@FMzbBFDo=1
+R1
+IYXUih9ZQR1Y4D<[9VOJkO2
+R2
+R3
+R21
+R22
+R23
+!i122 1652
+L0 269 3
+R7
+r1
+!s85 0
+31
+R8
+R24
+R25
+!i113 1
+R11
+R12
+n@or_1_bit
+vOr_1_bit_EXE
+R13
+!i10b 1
+!s100 F4VmRObzdnZP>G23k=JlB1
+R1
+IMIIW8bPD8lDb2_z8dnQTl0
+R2
+R3
+R14
+R15
+R16
+!i122 1648
+L0 135 3
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!i113 1
+R11
+R12
+n@or_1_bit_@e@x@e
+vPC_reg
+R0
+!i10b 1
+!s100 PI7V]lX=lbHGHia@9A]mR0
+R1
+Ic@FKiWXHf3BGbAo][@;0Y2
+R2
+R3
+R4
+R5
+R6
+!i122 1654
+L0 105 22
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+n@p@c_reg
+vreg_file
+R20
+!i10b 1
+!s100 lORgDM`=KR?nJ8f;9oZaX3
+R1
+IGJNMV8TTzX]RH>?;X7@P43
+R2
+R3
+R21
+R22
+R23
+!i122 1652
+L0 143 31
+R7
+r1
+!s85 0
+31
+R8
+R24
+R25
+!i113 1
+R11
+R12
+vSRAM
+Z30 !s110 1675540397
+!i10b 1
+!s100 f`37ZRVQ:gUnQ3@<n1R;A1
+R1
+InWRL]?X^]YB]]4=aV]0[O2
+R2
+R3
+w1672724957
+8C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/SRAM.v
+FC:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/SRAM.v
+!i122 1661
+L0 2 18
+R7
+r1
+!s85 0
+31
+!s108 1675540397.000000
+!s107 C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/SRAM.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/SRAM.v|
+!i113 1
+R11
+R12
+n@s@r@a@m
+vSram_Controller
+R30
+!i10b 1
+!s100 mXG_IYBE9X`CZa>HVHdlQ0
+R1
+IW>VR5oaI]7Hz_15A9@1HI3
+R2
+R3
+w1675516504
+8C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/Sram_Controller.v
+FC:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/Sram_Controller.v
+!i122 1660
+L0 1 121
+R7
+r1
+!s85 0
+31
+!s108 1675540396.000000
+!s107 C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/Sram_Controller.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/Sram_Controller.v|
+!i113 1
+R11
+R12
+n@sram_@controller
+vStatus_Register
+R13
+!i10b 1
+!s100 P8bjlimEU;kT2NNm37Fd^2
+R1
+IGlB]jNHBFN^AJIFTY`VBB2
+R2
+R3
+R14
+R15
+R16
+!i122 1648
+L0 116 8
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!i113 1
+R11
+R12
+n@status_@register
+vtb
+R29
+!i10b 1
+!s100 Z9P7jPQZ0nN:d6UR0H^iB2
+R1
+I`Vzz9bhDmjJmGY;ahkikb1
+R2
+R3
+w1672723558
+8C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/tb.v
+FC:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/tb.v
+!i122 1658
+L0 2 17
+R7
+r1
+!s85 0
+31
+Z31 !s108 1675540395.000000
+!s107 C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/tb.v|
+!i113 1
+R11
+R12
+vVal_2Generate
+R13
+!i10b 1
+!s100 5[?UChC[2bN2iCQfLO[660
+R1
+IVm@hX=:G_:SaMJlH`bzIh0
+R2
+R3
+R14
+R15
+R16
+!i122 1648
+L0 151 35
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!i113 1
+R11
+R12
+n@val_2@generate
+vWB
+!s110 1675540396
+!i10b 1
+!s100 <mcK2c]BANOk>=`ZRm@:W2
+R1
+IINf;lSi?XWo8Go7XJGcjX2
+R2
+R3
+w1668797578
+8C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/WB.v
+FC:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/WB.v
+!i122 1659
+L0 1 19
+R7
+r1
+!s85 0
+31
+R31
+!s107 C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/WB.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/WB.v|
+!i113 1
+R11
+R12
+n@w@b

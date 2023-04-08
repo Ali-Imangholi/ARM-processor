@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sun Feb 05 23:10:35 2023
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : ARM_FPGA
+Top-level Entity Name : ARM_FPGA
+Family : Cyclone II
+Device : EP2C35F672C6
+Timing Models : Final
+Total logic elements : 4,445 / 33,216 ( 13 % )
+    Total combinational functions : 2,562 / 33,216 ( 8 % )
+    Dedicated logic registers : 3,167 / 33,216 ( 10 % )
+Total registers : 3167
+Total pins : 21 / 475 ( 4 % )
+Total virtual pins : 0
+Total memory bits : 23,136 / 483,840 ( 5 % )
+Embedded Multiplier 9-bit elements : 0 / 70 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

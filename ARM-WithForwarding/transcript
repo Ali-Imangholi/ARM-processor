@@ -1,0 +1,75 @@
+# ** Note: (vish-4074) File C:/Users/iman/Desktop/DLD2/ARM-WithForwarding/vsim.wlf is still open, viewing file in live viewing mode.
+# Compile of ARM.v was successful.
+# Compile of EXE.v was successful.
+# Compile of EXE_MEM.v was successful.
+# Compile of Forwarding_Unit.v was successful.
+# Compile of hazard_Detection_Unit.v was successful.
+# Compile of ID.v was successful with warnings.
+# Compile of ID_EXE.v was successful.
+# Compile of IF.v was successful.
+# Compile of IF_ID.v was successful.
+# Compile of MEM.v was successful.
+# Compile of MEM_WB.v was successful.
+# Compile of tb.v was successful.
+# Compile of WB.v was successful.
+# 13 compiles, 0 failed with no errors.
+# Compile of ARM.v was successful.
+# Compile of EXE.v was successful.
+# Compile of EXE_MEM.v was successful.
+# Compile of Forwarding_Unit.v was successful.
+# Compile of hazard_Detection_Unit.v was successful.
+# Compile of ID.v was successful with warnings.
+# Compile of ID_EXE.v was successful.
+# Compile of IF.v was successful.
+# Compile of IF_ID.v was successful.
+# Compile of MEM.v was successful.
+# Compile of MEM_WB.v was successful.
+# Compile of tb.v was successful.
+# Compile of WB.v was successful.
+# 13 compiles, 0 failed with no errors.
+vsim work.tb
+# vsim work.tb 
+# Start time: 23:36:03 on Feb 04,2023
+# Loading work.tb
+# Loading work.ARM
+# Loading work.IF
+# Loading work.Adder
+# Loading work.inst_mem
+# Loading work.IF_MUX
+# Loading work.PC_reg
+# Loading work.IF_ID
+# Loading work.hazard_Detection_Unit
+# Loading work.ID
+# Loading work.reg_file
+# Loading work.ID_controlUnit
+# Loading work.Condition_Check
+# Loading work.Not_1_bit
+# Loading work.Or_1_bit
+# Loading work.Mux2_9_bit
+# Loading work.Mux2_4_bit
+# Loading work.ID_EXE
+# Loading work.EXE
+# Loading work.ALU
+# Loading work.Status_Register
+# Loading work.Adder_32_EXE
+# Loading work.Or_1_bit_EXE
+# Loading work.mux_32_bit_3_to_1
+# Loading work.Val_2Generate
+# Loading work.EXE_MEM
+# Loading work.MEM
+# Loading work.MEM_WB
+# Loading work.Forwarding_Unit
+# Loading work.WB
+add wave -position insertpoint  \
+sim:/tb/arm/id_stage/RF/Reg
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: iman  Hostname: DESKTOP-QCMARDT  ProcessID: 1912
+#           Attempting to use alternate WLF file "./wlftj5w7hk".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftj5w7hk
+run -all
+# ** Note: $stop    : C:/Users/iman/Desktop/DLD2/ARM-WithForwarding/tb.v(13)
+#    Time: 4100 ns  Iteration: 0  Instance: /tb
+# Break in Module tb at C:/Users/iman/Desktop/DLD2/ARM-WithForwarding/tb.v line 13
+# End time: 23:42:14 on Feb 04,2023, Elapsed time: 0:06:11
+# Errors: 0, Warnings: 6

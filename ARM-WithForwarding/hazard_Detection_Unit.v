@@ -1,0 +1,51 @@
+module hazard_Detection_Unit
+(
+input [3:0]src1,
+input [3:0]src2,
+input [3:0]Exe_Dest,
+input Exe_WB_EN,
+input [3:0] Mem_Dest,
+input Mem_WB_EN,
+input Mem_R_EN, // out exec_stage
+input Two_src,
+input [3:0]ExecuteCommand, // ExecuteCommand[Id stage] in order to check weather a source of a command is important or not.
+input hasForwarding, // the core has forwarding unit or not
+output reg hazard_detected
+);
+
+parameter[3:0]  MOV = 4'b0001, MVN = 4'b1001; // MOV and MVN execution code
+
+always@(*)
+begin
+	if(hasForwarding==1'b0)
+	begin
+		if(src1 == Exe_Dest && Exe_WB_EN==1'b1 && ExecuteCommand != MOV && ExecuteCommand != MVN)
+			hazard_detected = 1'b1;
+		else if(src1 == Mem_Dest && Mem_WB_EN==1'b1 && ExecuteCommand != MOV && ExecuteCommand != MVN)
+			hazard_detected = 1'b1;
+		else if(src2 == Exe_Dest && Exe_WB_EN==1'b1 && Two_src==1'b1)
+			hazard_detected = 1'b1;
+		else if(src2 == Mem_Dest && Mem_WB_EN==1'b1 && Two_src==1'b1)
+			hazard_detected = 1'b1;
+	end
+	else if(hasForwarding==1'b1) // we have forwarding unit, but we must handel the command after the LDR which has dependency with load
+	begin
+		if(Mem_R_EN==1'b1) // so the command in exec_unit is LDR
+		//Then we have to check while the last command is LDR(in the exec unit), the command in ID stage has dependency with LDR or not
+		begin
+			if(src1 == Exe_Dest && Exe_WB_EN==1'b1 && ExecuteCommand != MOV && ExecuteCommand != MVN)
+				hazard_detected = 1'b1;
+			else if(src2 == Exe_Dest && Exe_WB_EN==1'b1 && Two_src==1'b1)
+				hazard_detected = 1'b1;
+			else
+				hazard_detected = 1'b0;
+		end
+		else
+			hazard_detected = 1'b0;
+	end
+	else
+		hazard_detected = 1'b0;
+end
+
+
+endmodule

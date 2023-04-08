@@ -1,0 +1,593 @@
+# Compile of ARM.v was successful.
+# Compile of cache_controller.v was successful.
+# Compile of EXE.v was successful.
+# Compile of EXE_MEM.v was successful.
+# Compile of hazard_Detection_Unit.v was successful.
+# Compile of ID.v was successful with warnings.
+# Compile of ID_EXE.v was successful.
+# Compile of IF.v was successful.
+# Compile of IF_ID.v was successful.
+# Compile of MEM.v was successful.
+# Compile of MEM_WB.v was successful.
+# Compile of SRAM.v was successful.
+# Compile of Sram_Controller.v was successful.
+# Compile of tb.v was successful.
+# Compile of WB.v was successful.
+# 15 compiles, 0 failed with no errors.
+vsim work.tb
+# vsim work.tb 
+# Start time: 14:27:27 on Jan 08,2023
+# Loading work.tb
+# Loading work.ARM
+# Loading work.IF
+# Loading work.Adder
+# Loading work.inst_mem
+# Loading work.IF_MUX
+# Loading work.PC_reg
+# Loading work.IF_ID
+# Loading work.hazard_Detection_Unit
+# Loading work.ID
+# Loading work.reg_file
+# Loading work.ID_controlUnit
+# Loading work.Condition_Check
+# Loading work.Not_1_bit
+# Loading work.Or_1_bit
+# Loading work.Mux2_9_bit
+# Loading work.Mux2_4_bit
+# Loading work.ID_EXE
+# Loading work.EXE
+# Loading work.ALU
+# Loading work.Status_Register
+# Loading work.Adder_32_EXE
+# Loading work.Or_1_bit_EXE
+# Loading work.Val_2Generate
+# Loading work.EXE_MEM
+# Loading work.MEM
+# Loading work.cache_controller
+# Loading work.Sram_Controller
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'SRAM'.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/arm File: C:/Users/iman/Desktop/tst/ARM.v Line: 307
+# Loading work.MEM_WB
+# Loading work.WB
+# Error loading design
+# End time: 14:27:29 on Jan 08,2023, Elapsed time: 0:00:02
+# Errors: 1, Warnings: 5
+# Compile of ARM.v was successful.
+# Compile of cache_controller.v was successful.
+# Compile of EXE.v was successful.
+# Compile of EXE_MEM.v was successful.
+# Compile of hazard_Detection_Unit.v was successful.
+# Compile of ID.v was successful with warnings.
+# Compile of ID_EXE.v was successful.
+# Compile of IF.v was successful.
+# Compile of IF_ID.v was successful.
+# Compile of MEM.v was successful.
+# Compile of MEM_WB.v was successful.
+# Compile of SRAM.v was successful.
+# Compile of Sram_Controller.v was successful.
+# Compile of tb.v was successful.
+# Compile of WB.v was successful.
+# 15 compiles, 0 failed with no errors.
+vsim work.tb
+# vsim work.tb 
+# Start time: 14:28:18 on Jan 08,2023
+# Loading work.tb
+# Loading work.ARM
+# Loading work.IF
+# Loading work.Adder
+# Loading work.inst_mem
+# Loading work.IF_MUX
+# Loading work.PC_reg
+# Loading work.IF_ID
+# Loading work.hazard_Detection_Unit
+# Loading work.ID
+# Loading work.reg_file
+# Loading work.ID_controlUnit
+# Loading work.Condition_Check
+# Loading work.Not_1_bit
+# Loading work.Or_1_bit
+# Loading work.Mux2_9_bit
+# Loading work.Mux2_4_bit
+# Loading work.ID_EXE
+# Loading work.EXE
+# Loading work.ALU
+# Loading work.Status_Register
+# Loading work.Adder_32_EXE
+# Loading work.Or_1_bit_EXE
+# Loading work.Val_2Generate
+# Loading work.EXE_MEM
+# Loading work.MEM
+# Loading work.cache_controller
+# Loading work.Sram_Controller
+# Loading work.SRAM
+# Loading work.MEM_WB
+# Loading work.WB
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'id_exe'.  Expected 36, found 32.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/id_exe File: C:/Users/iman/Desktop/tst/ARM.v Line: 178
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_1_Rn_in'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_2_mux_in'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_1_Rn_out'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_2_mux_out'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'SRAM_DQ'. The port definition is at: C:/Users/iman/Desktop/tst/MEM.v(20).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/mem_stage File: C:/Users/iman/Desktop/tst/ARM.v Line: 275
+# ** Warning: (vsim-3015) [PCDPC] - Port size (18) does not match connection size (1) for port 'SRAM_ADDR'. The port definition is at: C:/Users/iman/Desktop/tst/MEM.v(21).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/mem_stage File: C:/Users/iman/Desktop/tst/ARM.v Line: 275
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'SRAM_CONTROLLER'.  Expected 15, found 11.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/mem_stage/SRAM_CONTROLLER File: C:/Users/iman/Desktop/tst/MEM.v Line: 55
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_UB_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_LB_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_CE_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_OE_N'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (18) does not match connection size (1) for port 'SRAM_ADDR'. The port definition is at: C:/Users/iman/Desktop/tst/SRAM.v(6).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/sram File: C:/Users/iman/Desktop/tst/ARM.v Line: 301
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'SRAM_DQ'. The port definition is at: C:/Users/iman/Desktop/tst/SRAM.v(7).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/sram File: C:/Users/iman/Desktop/tst/ARM.v Line: 301
+add wave -position insertpoint  \
+sim:/tb/arm/wb_stage/pc
+add wave -position insertpoint  \
+sim:/tb/arm/id_stage/RF/Reg
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'id_exe'.  Expected 36, found 32.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/id_exe File: C:/Users/iman/Desktop/tst/ARM.v Line: 178
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_1_Rn_in'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_2_mux_in'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_1_Rn_out'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_2_mux_out'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'SRAM_DQ'. The port definition is at: C:/Users/iman/Desktop/tst/MEM.v(20).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/mem_stage File: C:/Users/iman/Desktop/tst/ARM.v Line: 275
+# ** Warning: (vsim-3015) [PCDPC] - Port size (18) does not match connection size (1) for port 'SRAM_ADDR'. The port definition is at: C:/Users/iman/Desktop/tst/MEM.v(21).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/mem_stage File: C:/Users/iman/Desktop/tst/ARM.v Line: 275
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'SRAM_CONTROLLER'.  Expected 15, found 11.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/mem_stage/SRAM_CONTROLLER File: C:/Users/iman/Desktop/tst/MEM.v Line: 55
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_UB_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_LB_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_CE_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_OE_N'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (18) does not match connection size (1) for port 'SRAM_ADDR'. The port definition is at: C:/Users/iman/Desktop/tst/SRAM.v(6).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/sram File: C:/Users/iman/Desktop/tst/ARM.v Line: 301
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'SRAM_DQ'. The port definition is at: C:/Users/iman/Desktop/tst/SRAM.v(7).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/sram File: C:/Users/iman/Desktop/tst/ARM.v Line: 301
+run -all
+# ** Note: $stop    : C:/Users/iman/Desktop/tst/tb.v(13)
+#    Time: 4100 ns  Iteration: 0  Instance: /tb
+# Break in Module tb at C:/Users/iman/Desktop/tst/tb.v line 13
+add wave -position insertpoint  \
+sim:/tb/arm/if_stage/Freeze
+add wave -position insertpoint  \
+sim:/tb/arm/if_id/Freeze
+add wave -position insertpoint  \
+sim:/tb/arm/id_exe/Freeze
+add wave -position insertpoint  \
+sim:/tb/arm/exe_mem/Freeze
+add wave -position insertpoint  \
+sim:/tb/arm/mem_stage/ready
+add wave -position insertpoint  \
+sim:/tb/arm/mem_wb/Freeze
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'id_exe'.  Expected 36, found 32.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/id_exe File: C:/Users/iman/Desktop/tst/ARM.v Line: 178
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_1_Rn_in'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_2_mux_in'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_1_Rn_out'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_2_mux_out'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'SRAM_DQ'. The port definition is at: C:/Users/iman/Desktop/tst/MEM.v(20).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/mem_stage File: C:/Users/iman/Desktop/tst/ARM.v Line: 275
+# ** Warning: (vsim-3015) [PCDPC] - Port size (18) does not match connection size (1) for port 'SRAM_ADDR'. The port definition is at: C:/Users/iman/Desktop/tst/MEM.v(21).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/mem_stage File: C:/Users/iman/Desktop/tst/ARM.v Line: 275
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'SRAM_CONTROLLER'.  Expected 15, found 11.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/mem_stage/SRAM_CONTROLLER File: C:/Users/iman/Desktop/tst/MEM.v Line: 55
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_UB_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_LB_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_CE_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_OE_N'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (18) does not match connection size (1) for port 'SRAM_ADDR'. The port definition is at: C:/Users/iman/Desktop/tst/SRAM.v(6).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/sram File: C:/Users/iman/Desktop/tst/ARM.v Line: 301
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'SRAM_DQ'. The port definition is at: C:/Users/iman/Desktop/tst/SRAM.v(7).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/sram File: C:/Users/iman/Desktop/tst/ARM.v Line: 301
+run -all
+# ** Note: $stop    : C:/Users/iman/Desktop/tst/tb.v(13)
+#    Time: 4100 ns  Iteration: 0  Instance: /tb
+# Break in Module tb at C:/Users/iman/Desktop/tst/tb.v line 13
+add wave -position insertpoint  \
+sim:/tb/arm/if_stage/clk \
+sim:/tb/arm/if_stage/rst \
+sim:/tb/arm/if_stage/Branch_Address \
+sim:/tb/arm/if_stage/Branch_Tacken \
+sim:/tb/arm/if_stage/Freeze \
+sim:/tb/arm/if_stage/PC \
+sim:/tb/arm/if_stage/Inst_Out \
+sim:/tb/arm/if_stage/PC_reg_out \
+sim:/tb/arm/if_stage/IF_mux_out
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'id_exe'.  Expected 36, found 32.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/id_exe File: C:/Users/iman/Desktop/tst/ARM.v Line: 178
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_1_Rn_in'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_2_mux_in'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_1_Rn_out'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_2_mux_out'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'SRAM_DQ'. The port definition is at: C:/Users/iman/Desktop/tst/MEM.v(20).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/mem_stage File: C:/Users/iman/Desktop/tst/ARM.v Line: 275
+# ** Warning: (vsim-3015) [PCDPC] - Port size (18) does not match connection size (1) for port 'SRAM_ADDR'. The port definition is at: C:/Users/iman/Desktop/tst/MEM.v(21).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/mem_stage File: C:/Users/iman/Desktop/tst/ARM.v Line: 275
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'SRAM_CONTROLLER'.  Expected 15, found 11.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/mem_stage/SRAM_CONTROLLER File: C:/Users/iman/Desktop/tst/MEM.v Line: 55
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_UB_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_LB_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_CE_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_OE_N'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (18) does not match connection size (1) for port 'SRAM_ADDR'. The port definition is at: C:/Users/iman/Desktop/tst/SRAM.v(6).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/sram File: C:/Users/iman/Desktop/tst/ARM.v Line: 301
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'SRAM_DQ'. The port definition is at: C:/Users/iman/Desktop/tst/SRAM.v(7).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/sram File: C:/Users/iman/Desktop/tst/ARM.v Line: 301
+add wave -position insertpoint  \
+sim:/tb/arm/sram/clk \
+sim:/tb/arm/sram/rst \
+sim:/tb/arm/sram/SRAM_WE_N \
+sim:/tb/arm/sram/SRAM_ADDR \
+sim:/tb/arm/sram/SRAM_DQ \
+sim:/tb/arm/sram/memory
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'id_exe'.  Expected 36, found 32.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/id_exe File: C:/Users/iman/Desktop/tst/ARM.v Line: 178
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_1_Rn_in'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_2_mux_in'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_1_Rn_out'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_2_mux_out'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'SRAM_DQ'. The port definition is at: C:/Users/iman/Desktop/tst/MEM.v(20).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/mem_stage File: C:/Users/iman/Desktop/tst/ARM.v Line: 275
+# ** Warning: (vsim-3015) [PCDPC] - Port size (18) does not match connection size (1) for port 'SRAM_ADDR'. The port definition is at: C:/Users/iman/Desktop/tst/MEM.v(21).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/mem_stage File: C:/Users/iman/Desktop/tst/ARM.v Line: 275
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'SRAM_CONTROLLER'.  Expected 15, found 11.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/mem_stage/SRAM_CONTROLLER File: C:/Users/iman/Desktop/tst/MEM.v Line: 55
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_UB_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_LB_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_CE_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_OE_N'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (18) does not match connection size (1) for port 'SRAM_ADDR'. The port definition is at: C:/Users/iman/Desktop/tst/SRAM.v(6).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/sram File: C:/Users/iman/Desktop/tst/ARM.v Line: 301
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'SRAM_DQ'. The port definition is at: C:/Users/iman/Desktop/tst/SRAM.v(7).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/sram File: C:/Users/iman/Desktop/tst/ARM.v Line: 301
+run -all
+# ** Note: $stop    : C:/Users/iman/Desktop/tst/tb.v(13)
+#    Time: 4100 ns  Iteration: 0  Instance: /tb
+# Break in Module tb at C:/Users/iman/Desktop/tst/tb.v line 13
+add wave -position insertpoint  \
+sim:/tb/arm/mem_stage/SRAM_CONTROLLER/S_0 \
+sim:/tb/arm/mem_stage/SRAM_CONTROLLER/S_1 \
+sim:/tb/arm/mem_stage/SRAM_CONTROLLER/S_2 \
+sim:/tb/arm/mem_stage/SRAM_CONTROLLER/S_3 \
+sim:/tb/arm/mem_stage/SRAM_CONTROLLER/S_4 \
+sim:/tb/arm/mem_stage/SRAM_CONTROLLER/S_5 \
+sim:/tb/arm/mem_stage/SRAM_CONTROLLER/clk \
+sim:/tb/arm/mem_stage/SRAM_CONTROLLER/rst \
+sim:/tb/arm/mem_stage/SRAM_CONTROLLER/wr_en \
+sim:/tb/arm/mem_stage/SRAM_CONTROLLER/rd_en \
+sim:/tb/arm/mem_stage/SRAM_CONTROLLER/address \
+sim:/tb/arm/mem_stage/SRAM_CONTROLLER/writData \
+sim:/tb/arm/mem_stage/SRAM_CONTROLLER/readData \
+sim:/tb/arm/mem_stage/SRAM_CONTROLLER/ready \
+sim:/tb/arm/mem_stage/SRAM_CONTROLLER/SRAM_DQ \
+sim:/tb/arm/mem_stage/SRAM_CONTROLLER/SRAM_ADDR \
+sim:/tb/arm/mem_stage/SRAM_CONTROLLER/SRAM_UB_N \
+sim:/tb/arm/mem_stage/SRAM_CONTROLLER/SRAM_LB_N \
+sim:/tb/arm/mem_stage/SRAM_CONTROLLER/SRAM_WE_N \
+sim:/tb/arm/mem_stage/SRAM_CONTROLLER/SRAM_CE_N \
+sim:/tb/arm/mem_stage/SRAM_CONTROLLER/SRAM_OE_N \
+sim:/tb/arm/mem_stage/SRAM_CONTROLLER/ns \
+sim:/tb/arm/mem_stage/SRAM_CONTROLLER/ps
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'id_exe'.  Expected 36, found 32.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/id_exe File: C:/Users/iman/Desktop/tst/ARM.v Line: 178
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_1_Rn_in'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_2_mux_in'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_1_Rn_out'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_2_mux_out'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'SRAM_DQ'. The port definition is at: C:/Users/iman/Desktop/tst/MEM.v(20).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/mem_stage File: C:/Users/iman/Desktop/tst/ARM.v Line: 275
+# ** Warning: (vsim-3015) [PCDPC] - Port size (18) does not match connection size (1) for port 'SRAM_ADDR'. The port definition is at: C:/Users/iman/Desktop/tst/MEM.v(21).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/mem_stage File: C:/Users/iman/Desktop/tst/ARM.v Line: 275
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'SRAM_CONTROLLER'.  Expected 15, found 11.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/mem_stage/SRAM_CONTROLLER File: C:/Users/iman/Desktop/tst/MEM.v Line: 55
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_UB_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_LB_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_CE_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_OE_N'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (18) does not match connection size (1) for port 'SRAM_ADDR'. The port definition is at: C:/Users/iman/Desktop/tst/SRAM.v(6).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/sram File: C:/Users/iman/Desktop/tst/ARM.v Line: 301
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'SRAM_DQ'. The port definition is at: C:/Users/iman/Desktop/tst/SRAM.v(7).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/sram File: C:/Users/iman/Desktop/tst/ARM.v Line: 301
+run -all
+# ** Note: $stop    : C:/Users/iman/Desktop/tst/tb.v(13)
+#    Time: 4100 ns  Iteration: 0  Instance: /tb
+# Break in Module tb at C:/Users/iman/Desktop/tst/tb.v line 13
+add wave -position insertpoint  \
+sim:/tb/arm/sram/clk \
+sim:/tb/arm/sram/rst \
+sim:/tb/arm/sram/SRAM_WE_N \
+sim:/tb/arm/sram/SRAM_ADDR \
+sim:/tb/arm/sram/SRAM_DQ \
+sim:/tb/arm/sram/memory
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'id_exe'.  Expected 36, found 32.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/id_exe File: C:/Users/iman/Desktop/tst/ARM.v Line: 178
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_1_Rn_in'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_2_mux_in'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_1_Rn_out'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_2_mux_out'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'SRAM_DQ'. The port definition is at: C:/Users/iman/Desktop/tst/MEM.v(20).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/mem_stage File: C:/Users/iman/Desktop/tst/ARM.v Line: 275
+# ** Warning: (vsim-3015) [PCDPC] - Port size (18) does not match connection size (1) for port 'SRAM_ADDR'. The port definition is at: C:/Users/iman/Desktop/tst/MEM.v(21).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/mem_stage File: C:/Users/iman/Desktop/tst/ARM.v Line: 275
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'SRAM_CONTROLLER'.  Expected 15, found 11.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/mem_stage/SRAM_CONTROLLER File: C:/Users/iman/Desktop/tst/MEM.v Line: 55
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_UB_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_LB_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_CE_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_OE_N'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (18) does not match connection size (1) for port 'SRAM_ADDR'. The port definition is at: C:/Users/iman/Desktop/tst/SRAM.v(6).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/sram File: C:/Users/iman/Desktop/tst/ARM.v Line: 301
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'SRAM_DQ'. The port definition is at: C:/Users/iman/Desktop/tst/SRAM.v(7).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/sram File: C:/Users/iman/Desktop/tst/ARM.v Line: 301
+run -all
+# ** Note: $stop    : C:/Users/iman/Desktop/tst/tb.v(13)
+#    Time: 4100 ns  Iteration: 0  Instance: /tb
+# Break in Module tb at C:/Users/iman/Desktop/tst/tb.v line 13
+# Compile of ARM.v was successful.
+# Compile of cache_controller.v was successful.
+# Compile of EXE.v was successful.
+# Compile of EXE_MEM.v was successful.
+# Compile of hazard_Detection_Unit.v was successful.
+# Compile of ID.v was successful with warnings.
+# Compile of ID_EXE.v was successful.
+# Compile of IF.v was successful.
+# Compile of IF_ID.v was successful.
+# Compile of MEM.v was successful.
+# Compile of MEM_WB.v was successful.
+# Compile of SRAM.v was successful.
+# Compile of Sram_Controller.v was successful.
+# Compile of tb.v was successful.
+# Compile of WB.v was successful.
+# 15 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb
+# Loading work.ARM
+# Loading work.IF
+# Loading work.Adder
+# Loading work.inst_mem
+# Loading work.IF_MUX
+# Loading work.PC_reg
+# Loading work.IF_ID
+# Loading work.hazard_Detection_Unit
+# Loading work.ID
+# Loading work.reg_file
+# Loading work.ID_controlUnit
+# Loading work.Condition_Check
+# Loading work.Not_1_bit
+# Loading work.Or_1_bit
+# Loading work.Mux2_9_bit
+# Loading work.Mux2_4_bit
+# Loading work.ID_EXE
+# Loading work.EXE
+# Loading work.ALU
+# Loading work.Status_Register
+# Loading work.Adder_32_EXE
+# Loading work.Or_1_bit_EXE
+# Loading work.Val_2Generate
+# Loading work.EXE_MEM
+# Loading work.MEM
+# Loading work.cache_controller
+# Loading work.Sram_Controller
+# Loading work.SRAM
+# Loading work.MEM_WB
+# Loading work.WB
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'id_exe'.  Expected 36, found 32.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/id_exe File: C:/Users/iman/Desktop/tst/ARM.v Line: 178
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_1_Rn_in'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_2_mux_in'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_1_Rn_out'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_2_mux_out'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'SRAM_DQ'. The port definition is at: C:/Users/iman/Desktop/tst/MEM.v(20).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/mem_stage File: C:/Users/iman/Desktop/tst/ARM.v Line: 275
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'SRAM_CONTROLLER'.  Expected 15, found 11.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/mem_stage/SRAM_CONTROLLER File: C:/Users/iman/Desktop/tst/MEM.v Line: 55
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_UB_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_LB_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_CE_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_OE_N'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'SRAM_DQ'. The port definition is at: C:/Users/iman/Desktop/tst/SRAM.v(7).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/sram File: C:/Users/iman/Desktop/tst/ARM.v Line: 301
+run -all
+# ** Note: $stop    : C:/Users/iman/Desktop/tst/tb.v(13)
+#    Time: 4100 ns  Iteration: 0  Instance: /tb
+# Break in Module tb at C:/Users/iman/Desktop/tst/tb.v line 13
+# Compile of ARM.v was successful.
+# Compile of cache_controller.v was successful.
+# Compile of EXE.v was successful.
+# Compile of EXE_MEM.v was successful.
+# Compile of hazard_Detection_Unit.v was successful.
+# Compile of ID.v was successful with warnings.
+# Compile of ID_EXE.v was successful.
+# Compile of IF.v was successful.
+# Compile of IF_ID.v was successful.
+# Compile of MEM.v was successful.
+# Compile of MEM_WB.v was successful.
+# Compile of SRAM.v was successful.
+# Compile of Sram_Controller.v was successful.
+# Compile of tb.v was successful.
+# Compile of WB.v was successful.
+# 15 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb
+# Loading work.ARM
+# Loading work.IF
+# Loading work.Adder
+# Loading work.inst_mem
+# Loading work.IF_MUX
+# Loading work.PC_reg
+# Loading work.IF_ID
+# Loading work.hazard_Detection_Unit
+# Loading work.ID
+# Loading work.reg_file
+# Loading work.ID_controlUnit
+# Loading work.Condition_Check
+# Loading work.Not_1_bit
+# Loading work.Or_1_bit
+# Loading work.Mux2_9_bit
+# Loading work.Mux2_4_bit
+# Loading work.ID_EXE
+# Loading work.EXE
+# Loading work.ALU
+# Loading work.Status_Register
+# Loading work.Adder_32_EXE
+# Loading work.Or_1_bit_EXE
+# Loading work.Val_2Generate
+# Loading work.EXE_MEM
+# Loading work.MEM
+# Loading work.cache_controller
+# Loading work.Sram_Controller
+# Loading work.SRAM
+# Loading work.MEM_WB
+# Loading work.WB
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'id_exe'.  Expected 36, found 32.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/id_exe File: C:/Users/iman/Desktop/tst/ARM.v Line: 178
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_1_Rn_in'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_2_mux_in'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_1_Rn_out'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_2_mux_out'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'SRAM_CONTROLLER'.  Expected 15, found 11.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/mem_stage/SRAM_CONTROLLER File: C:/Users/iman/Desktop/tst/MEM.v Line: 55
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_UB_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_LB_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_CE_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_OE_N'.
+run -all
+# ** Note: $stop    : C:/Users/iman/Desktop/tst/tb.v(13)
+#    Time: 4100 ns  Iteration: 0  Instance: /tb
+# Break in Module tb at C:/Users/iman/Desktop/tst/tb.v line 13
+add wave -position insertpoint  \
+sim:/tb/arm/wb_stage/pc_out
+add wave -position insertpoint  \
+sim:/tb/arm/id_stage/RF/clk \
+sim:/tb/arm/id_stage/RF/rst \
+sim:/tb/arm/id_stage/RF/src1 \
+sim:/tb/arm/id_stage/RF/src2 \
+sim:/tb/arm/id_stage/RF/Dest_wb \
+sim:/tb/arm/id_stage/RF/Result_WB \
+sim:/tb/arm/id_stage/RF/writeBackEn \
+sim:/tb/arm/id_stage/RF/reg1 \
+sim:/tb/arm/id_stage/RF/reg2 \
+sim:/tb/arm/id_stage/RF/Reg
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'id_exe'.  Expected 36, found 32.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/id_exe File: C:/Users/iman/Desktop/tst/ARM.v Line: 178
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_1_Rn_in'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_2_mux_in'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_1_Rn_out'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_2_mux_out'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'SRAM_CONTROLLER'.  Expected 15, found 11.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/mem_stage/SRAM_CONTROLLER File: C:/Users/iman/Desktop/tst/MEM.v Line: 55
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_UB_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_LB_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_CE_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_OE_N'.
+run -all
+# ** Note: $stop    : C:/Users/iman/Desktop/tst/tb.v(13)
+#    Time: 4100 ns  Iteration: 0  Instance: /tb
+# Break in Module tb at C:/Users/iman/Desktop/tst/tb.v line 13
+add wave -position insertpoint  \
+sim:/tb/arm/id_stage/RF/Reg
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'id_exe'.  Expected 36, found 32.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/id_exe File: C:/Users/iman/Desktop/tst/ARM.v Line: 178
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_1_Rn_in'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_2_mux_in'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_1_Rn_out'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_2_mux_out'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'SRAM_CONTROLLER'.  Expected 15, found 11.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/mem_stage/SRAM_CONTROLLER File: C:/Users/iman/Desktop/tst/MEM.v Line: 55
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_UB_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_LB_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_CE_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_OE_N'.
+run -all
+# ** Note: $stop    : C:/Users/iman/Desktop/tst/tb.v(13)
+#    Time: 4100 ns  Iteration: 0  Instance: /tb
+# Break in Module tb at C:/Users/iman/Desktop/tst/tb.v line 13
+# Compile of ARM.v was successful.
+# Compile of cache_controller.v was successful.
+# Compile of EXE.v was successful.
+# Compile of EXE_MEM.v was successful.
+# Compile of hazard_Detection_Unit.v was successful.
+# Compile of ID.v was successful with warnings.
+# Compile of ID_EXE.v was successful.
+# Compile of IF.v was successful.
+# Compile of IF_ID.v was successful.
+# Compile of MEM.v was successful.
+# Compile of MEM_WB.v was successful.
+# Compile of SRAM.v was successful.
+# Compile of Sram_Controller.v was successful.
+# Compile of tb.v was successful.
+# Compile of WB.v was successful.
+# 15 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb
+# Loading work.ARM
+# Loading work.IF
+# Loading work.Adder
+# Loading work.inst_mem
+# Loading work.IF_MUX
+# Loading work.PC_reg
+# Loading work.IF_ID
+# Loading work.hazard_Detection_Unit
+# Loading work.ID
+# Loading work.reg_file
+# Loading work.ID_controlUnit
+# Loading work.Condition_Check
+# Loading work.Not_1_bit
+# Loading work.Or_1_bit
+# Loading work.Mux2_9_bit
+# Loading work.Mux2_4_bit
+# Loading work.ID_EXE
+# Loading work.EXE
+# Loading work.ALU
+# Loading work.Status_Register
+# Loading work.Adder_32_EXE
+# Loading work.Or_1_bit_EXE
+# Loading work.Val_2Generate
+# Loading work.EXE_MEM
+# Loading work.MEM
+# Loading work.cache_controller
+# Loading work.Sram_Controller
+# Loading work.SRAM
+# Loading work.MEM_WB
+# Loading work.WB
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'id_exe'.  Expected 36, found 32.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/id_exe File: C:/Users/iman/Desktop/tst/ARM.v Line: 178
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_1_Rn_in'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_2_mux_in'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_1_Rn_out'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/ARM.v(178): [TFMPC] - Missing connection for port 'src_2_mux_out'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'SRAM_CONTROLLER'.  Expected 15, found 11.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/mem_stage/SRAM_CONTROLLER File: C:/Users/iman/Desktop/tst/MEM.v Line: 55
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_UB_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_LB_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_CE_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/tst/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_OE_N'.
+run -all
+# ** Note: $stop    : C:/Users/iman/Desktop/tst/tb.v(13)
+#    Time: 5100 ns  Iteration: 0  Instance: /tb
+# Break in Module tb at C:/Users/iman/Desktop/tst/tb.v line 13
+quit -sim
+# End time: 14:38:17 on Jan 08,2023, Elapsed time: 0:09:59
+# Errors: 0, Warnings: 11

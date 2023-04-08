@@ -1,0 +1,123 @@
+C:/Users/iman/Desktop/tst/Sram_Controller.v {1 {vlog -work work -stats=none C:/Users/iman/Desktop/tst/Sram_Controller.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Sram_Controller
+
+Top level modules:
+	Sram_Controller
+
+} {} {}} C:/Users/iman/Desktop/tst/ID_EXE.v {1 {vlog -work work -stats=none C:/Users/iman/Desktop/tst/ID_EXE.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ID_EXE
+
+Top level modules:
+	ID_EXE
+
+} {} {}} C:/Users/iman/Desktop/tst/cache_controller.v {1 {vlog -work work -stats=none C:/Users/iman/Desktop/tst/cache_controller.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module cache_controller
+
+Top level modules:
+	cache_controller
+
+} {} {}} C:/Users/iman/Desktop/tst/MEM_WB.v {1 {vlog -work work -stats=none C:/Users/iman/Desktop/tst/MEM_WB.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module MEM_WB
+
+Top level modules:
+	MEM_WB
+
+} {} {}} C:/Users/iman/Desktop/tst/ARM.v {1 {vlog -work work -stats=none {C:\Users\iman\Desktop\tst\ARM.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ARM
+
+Top level modules:
+	ARM
+
+} {} {}} C:/Users/iman/Desktop/tst/EXE_MEM.v {1 {vlog -work work -stats=none C:/Users/iman/Desktop/tst/EXE_MEM.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module EXE_MEM
+
+Top level modules:
+	EXE_MEM
+
+} {} {}} C:/Users/iman/Desktop/tst/WB.v {1 {vlog -work work -stats=none C:/Users/iman/Desktop/tst/WB.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module WB
+
+Top level modules:
+	WB
+
+} {} {}} C:/Users/iman/Desktop/tst/EXE.v {1 {vlog -work work -stats=none C:/Users/iman/Desktop/tst/EXE.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module EXE
+-- Compiling module ALU
+-- Compiling module Status_Register
+-- Compiling module Adder_32_EXE
+-- Compiling module Or_1_bit_EXE
+-- Compiling module Val_2Generate
+
+Top level modules:
+	EXE
+
+} {} {}} C:/Users/iman/Desktop/tst/IF_ID.v {1 {vlog -work work -stats=none C:/Users/iman/Desktop/tst/IF_ID.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module IF_ID
+
+Top level modules:
+	IF_ID
+
+} {} {}} C:/Users/iman/Desktop/tst/SRAM.v {1 {vlog -work work -stats=none C:/Users/iman/Desktop/tst/SRAM.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module SRAM
+
+Top level modules:
+	SRAM
+
+} {} {}} C:/Users/iman/Desktop/tst/ID.v {2 {vlog -work work -stats=none C:/Users/iman/Desktop/tst/ID.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ID
+-- Compiling module reg_file
+-- Compiling module ID_controlUnit
+** Warning: C:/Users/iman/Desktop/tst/ID.v(189): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+-- Compiling module Condition_Check
+-- Compiling module Not_1_bit
+-- Compiling module Or_1_bit
+-- Compiling module Mux2_4_bit
+-- Compiling module Mux2_9_bit
+
+Top level modules:
+	ID
+
+} {} {}} C:/Users/iman/Desktop/tst/tb.v {1 {vlog -work work -stats=none {C:\Users\iman\Desktop\tst\tb.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb
+
+Top level modules:
+	tb
+
+} {} {}} C:/Users/iman/Desktop/tst/hazard_Detection_Unit.v {1 {vlog -work work -stats=none C:/Users/iman/Desktop/tst/hazard_Detection_Unit.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module hazard_Detection_Unit
+
+Top level modules:
+	hazard_Detection_Unit
+
+} {} {}} C:/Users/iman/Desktop/tst/IF.v {1 {vlog -work work -stats=none C:/Users/iman/Desktop/tst/IF.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module IF
+-- Compiling module Adder
+-- Compiling module inst_mem
+-- Compiling module IF_MUX
+-- Compiling module PC_reg
+
+Top level modules:
+	IF
+
+} {} {}} C:/Users/iman/Desktop/tst/MEM.v {1 {vlog -work work -stats=none {C:\Users\iman\Desktop\tst\MEM.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module MEM
+
+Top level modules:
+	MEM
+
+} {} {}}

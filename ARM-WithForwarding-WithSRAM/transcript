@@ -1,0 +1,85 @@
+# Compile of ARM.v was successful.
+# Compile of EXE.v was successful.
+# Compile of EXE_MEM.v was successful.
+# Compile of Forwarding_Unit.v was successful.
+# Compile of hazard_Detection_Unit.v was successful.
+# Compile of ID.v was successful with warnings.
+# Compile of ID_EXE.v was successful.
+# Compile of IF.v was successful.
+# Compile of IF_ID.v was successful.
+# Compile of MEM.v was successful.
+# Compile of MEM_WB.v was successful.
+# Compile of tb.v was successful.
+# Compile of WB.v was successful.
+# Compile of Sram_Controller.v was successful.
+# Compile of SRAM.v was successful.
+# 15 compiles, 0 failed with no errors.
+vsim work.tb
+# vsim work.tb 
+# Start time: 23:23:47 on Feb 04,2023
+# Loading work.tb
+# Loading work.ARM
+# Loading work.IF
+# Loading work.Adder
+# Loading work.inst_mem
+# Loading work.IF_MUX
+# Loading work.PC_reg
+# Loading work.IF_ID
+# Loading work.hazard_Detection_Unit
+# Loading work.ID
+# Loading work.reg_file
+# Loading work.ID_controlUnit
+# Loading work.Condition_Check
+# Loading work.Not_1_bit
+# Loading work.Or_1_bit
+# Loading work.Mux2_9_bit
+# Loading work.Mux2_4_bit
+# Loading work.ID_EXE
+# Loading work.EXE
+# Loading work.ALU
+# Loading work.Status_Register
+# Loading work.Adder_32_EXE
+# Loading work.Or_1_bit_EXE
+# Loading work.mux_32_bit_3_to_1
+# Loading work.Val_2Generate
+# Loading work.EXE_MEM
+# Loading work.MEM
+# Loading work.Sram_Controller
+# Loading work.SRAM
+# Loading work.MEM_WB
+# Loading work.Forwarding_Unit
+# Loading work.WB
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'SRAM_CONTROLLER'.  Expected 15, found 11.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/mem_stage/SRAM_CONTROLLER File: C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/MEM.v Line: 33
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/MEM.v(33): [TFMPC] - Missing connection for port 'SRAM_UB_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/MEM.v(33): [TFMPC] - Missing connection for port 'SRAM_LB_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/MEM.v(33): [TFMPC] - Missing connection for port 'SRAM_CE_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/MEM.v(33): [TFMPC] - Missing connection for port 'SRAM_OE_N'.
+add wave -position insertpoint  \
+sim:/tb/arm/wb_stage/pc
+add wave -position insertpoint  \
+sim:/tb/arm/id_stage/RF/Reg
+add wave -position insertpoint  \
+sim:/tb/arm/mem_stage/SRAM_CONTROLLER/ready
+run -all
+# ** Note: $stop    : C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/tb.v(13)
+#    Time: 5100 ns  Iteration: 0  Instance: /tb
+# Break in Module tb at C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/tb.v line 13
+run -all
+# Break key hit
+# Break at C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/ID.v line 47
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'SRAM_CONTROLLER'.  Expected 15, found 11.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/mem_stage/SRAM_CONTROLLER File: C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/MEM.v Line: 33
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/MEM.v(33): [TFMPC] - Missing connection for port 'SRAM_UB_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/MEM.v(33): [TFMPC] - Missing connection for port 'SRAM_LB_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/MEM.v(33): [TFMPC] - Missing connection for port 'SRAM_CE_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/MEM.v(33): [TFMPC] - Missing connection for port 'SRAM_OE_N'.
+run -all
+# ** Note: $stop    : C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/tb.v(13)
+#    Time: 5100 ns  Iteration: 0  Instance: /tb
+# Break in Module tb at C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM/tb.v line 13
+quit -sim
+# End time: 23:30:06 on Feb 04,2023, Elapsed time: 0:06:19
+# Errors: 0, Warnings: 6

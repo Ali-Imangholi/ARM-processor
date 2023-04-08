@@ -1,0 +1,9 @@
+
+State Machine - |ARM|MEM:mem_stage|Sram_Controller:SRAM_CONTROLLER|ps
+Name ps.S_5 ps.S_4 ps.S_3 ps.S_2 ps.S_1 ps.S_0 
+ps.S_0 0 0 0 0 0 0 
+ps.S_1 0 0 0 0 1 1 
+ps.S_2 0 0 0 1 0 1 
+ps.S_3 0 0 1 0 0 1 
+ps.S_4 0 1 0 0 0 1 
+ps.S_5 1 0 0 0 0 1 

@@ -1,0 +1,130 @@
+vsim work.WB
+# vsim work.WB 
+# Start time: 14:02:05 on Jan 08,2023
+# Loading work.WB
+# End time: 14:02:08 on Jan 08,2023, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 1
+# WLF Error: Simulation resolution of 1ps differs from current environment 1ns
+# Failure during 'sim' dataset creation.
+quit -sim
+vsim work.tb
+# vsim work.tb 
+# Start time: 14:02:15 on Jan 08,2023
+# Loading work.tb
+# Loading work.ARM
+# Loading work.IF
+# Loading work.Adder
+# Loading work.inst_mem
+# Loading work.IF_MUX
+# Loading work.PC_reg
+# Loading work.IF_ID
+# Loading work.hazard_Detection_Unit
+# Loading work.ID
+# Loading work.reg_file
+# Loading work.ID_controlUnit
+# Loading work.Condition_Check
+# Loading work.Not_1_bit
+# Loading work.Or_1_bit
+# Loading work.Mux2_9_bit
+# Loading work.Mux2_4_bit
+# Loading work.ID_EXE
+# Loading work.EXE
+# Loading work.ALU
+# Loading work.Status_Register
+# Loading work.Adder_32_EXE
+# Loading work.Or_1_bit_EXE
+# Loading work.mux_32_bit_3_to_1
+# Loading work.Val_2Generate
+# Loading work.EXE_MEM
+# Loading work.MEM
+# Loading work.cache_controller
+# Loading work.Sram_Controller
+# Loading work.SRAM
+# Loading work.MEM_WB
+# Loading work.Forwarding_Unit
+# Loading work.WB
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'SRAM_CONTROLLER'.  Expected 15, found 11.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/mem_stage/SRAM_CONTROLLER File: C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/MEM.v Line: 55
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_UB_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_LB_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_CE_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_OE_N'.
+add wave -position insertpoint  \
+sim:/tb/arm/wb_stage/pc
+add wave -position insertpoint  \
+sim:/tb/arm/id_stage/RF/Reg
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'SRAM_CONTROLLER'.  Expected 15, found 11.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/mem_stage/SRAM_CONTROLLER File: C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/MEM.v Line: 55
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_UB_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_LB_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_CE_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_OE_N'.
+run -all
+# ** Note: $stop    : C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/tb.v(13)
+#    Time: 5100 ns  Iteration: 0  Instance: /tb
+# Break in Module tb at C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/tb.v line 13
+add wave -position insertpoint  \
+sim:/tb/arm/mem_stage/CACHE_CONTROLLER/clk \
+sim:/tb/arm/mem_stage/CACHE_CONTROLLER/rst \
+sim:/tb/arm/mem_stage/CACHE_CONTROLLER/MEM_R_EN \
+sim:/tb/arm/mem_stage/CACHE_CONTROLLER/MEM_W_EN \
+sim:/tb/arm/mem_stage/CACHE_CONTROLLER/address \
+sim:/tb/arm/mem_stage/CACHE_CONTROLLER/wdata \
+sim:/tb/arm/mem_stage/CACHE_CONTROLLER/sram_rdata \
+sim:/tb/arm/mem_stage/CACHE_CONTROLLER/sram_ready \
+sim:/tb/arm/mem_stage/CACHE_CONTROLLER/sram_address \
+sim:/tb/arm/mem_stage/CACHE_CONTROLLER/sram_wdata \
+sim:/tb/arm/mem_stage/CACHE_CONTROLLER/write_enb \
+sim:/tb/arm/mem_stage/CACHE_CONTROLLER/read_enb \
+sim:/tb/arm/mem_stage/CACHE_CONTROLLER/rdata \
+sim:/tb/arm/mem_stage/CACHE_CONTROLLER/ready \
+sim:/tb/arm/mem_stage/CACHE_CONTROLLER/cache \
+sim:/tb/arm/mem_stage/CACHE_CONTROLLER/cacheAddress \
+sim:/tb/arm/mem_stage/CACHE_CONTROLLER/wordOffset \
+sim:/tb/arm/mem_stage/CACHE_CONTROLLER/index \
+sim:/tb/arm/mem_stage/CACHE_CONTROLLER/tag \
+sim:/tb/arm/mem_stage/CACHE_CONTROLLER/Hit_way_0 \
+sim:/tb/arm/mem_stage/CACHE_CONTROLLER/Hit_way_1 \
+sim:/tb/arm/mem_stage/CACHE_CONTROLLER/Miss \
+sim:/tb/arm/mem_stage/CACHE_CONTROLLER/i
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'SRAM_CONTROLLER'.  Expected 15, found 11.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/mem_stage/SRAM_CONTROLLER File: C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/MEM.v Line: 55
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_UB_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_LB_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_CE_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_OE_N'.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'SRAM_CONTROLLER'.  Expected 15, found 11.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/mem_stage/SRAM_CONTROLLER File: C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/MEM.v Line: 55
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_UB_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_LB_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_CE_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_OE_N'.
+run -all
+# ** Note: $stop    : C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/tb.v(13)
+#    Time: 5100 ns  Iteration: 0  Instance: /tb
+# Break in Module tb at C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/tb.v line 13
+add wave -position insertpoint  \
+sim:/tb/arm/wb_stage/pc
+add wave -position insertpoint  \
+sim:/tb/arm/id_stage/RF/Reg
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'SRAM_CONTROLLER'.  Expected 15, found 11.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/arm/mem_stage/SRAM_CONTROLLER File: C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/MEM.v Line: 55
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_UB_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_LB_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_CE_N'.
+# ** Warning: (vsim-3722) C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/MEM.v(55): [TFMPC] - Missing connection for port 'SRAM_OE_N'.
+run -all
+# ** Note: $stop    : C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/tb.v(13)
+#    Time: 5100 ns  Iteration: 0  Instance: /tb
+# Break in Module tb at C:/Users/iman/Desktop/DLD2/ARM-WithForwarding-WithSRAM-WithCache/tb.v line 13
+quit -sim
+# End time: 14:10:00 on Jan 08,2023, Elapsed time: 0:07:45
+# Errors: 0, Warnings: 6
